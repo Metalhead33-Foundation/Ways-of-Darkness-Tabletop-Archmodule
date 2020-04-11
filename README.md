@@ -8,5 +8,6 @@ This is a module for the [World of Artograch RPG system](https://bitbucket.touho
 ```bash
 git clone https://bitbucket.touhou.fm/scm/wod/wod-rpg-archmodule.git
 cd wod-rpg-archmodule
-lualatex wod-archmodule.tex
+chmod +x create.sh
+./create.sh
 ```

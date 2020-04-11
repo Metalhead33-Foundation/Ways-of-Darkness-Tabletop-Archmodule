@@ -14,6 +14,8 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{newtxtext,newtxmath}
+\usepackage{makecell}
+\usepackage{import}
 \usepackage[square,sort,comma,numbers]{natbib}
 \usepackage[a4paper, margin=1.5cm]{geometry}
 \graphicspath{ {./images/} }
@@ -251,7 +253,7 @@ They live in smaller or bigger communities, but it’s not rare for the younger 
 \end{itemize}
 As previously stated, while playing as characters from these races is not explicitly forbidden per se, it is genuinely not recommended for game masters to let players create characters from these races. These races will also be non-playable in any future video game adaptations.
 \section{Nereids}
-\textbf{Nereids} - also called \textbf{Mermaids and Mermen - are the politically dominant race of the Free City of Gabyr, in spite of only constituting 26.72\% of its population.\newline
+\textbf{Nereids} - also called \textbf{Mermaids and Mermen} - are the politically dominant race of the Free City of Gabyr, in spite of only constituting 26.72\% of its population.\newline
 \begin{tabular}{|c|c|c|}
 \hline
  & \textbf{Min} & \textbf{Max} \\ \hline
@@ -340,6 +342,13 @@ Just like vampires, theriantropes are a special kind of undead that - through th
 \subsection{The Bard}
 \subsection{The Herbalist}
 \chapter{Feats}
+\begin{tabular}{|ccc|}
+\hline
+\multicolumn{3}{|c|}{Armour Conditioning} \\ \hline
+\import{images/Feats/}{images/Feats/Armour1.pdf_tex} & \import{images/Feats/}{images/Feats/Armour2.pdf_tex} & \import{images/Feats/}{images/Feats/Armour3.pdf_tex} \\ \hline
+Light        & Medium       & Heavy       \\ \hline
+\multicolumn{3}{|c|}{\makecell{\textbf{Untrained:} The character feels uncomfortable in armour, and a \Malus{50\%} to movement speed when wearing any sort of armour. When any calculations are made that involve Dexterity, wearing any sort of armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing any sort of armour. \\ \textbf{Light:} The character feels comfortable with Light Armour \Parentheses{Gambeson and Leather Armour}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing any armour other than Gambeson and Leather Armour. When any calculations are made that involve Dexterity, wearing Medium or Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Medium or Heavy Armour. \\  \textbf{Medium:} The character feels comfortable with Medium Armour \Parentheses{Chainmail and Scalemail}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing Heavy Armour. When any calculations are made that involve Dexterity, wearing Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Heavy Armour. \\  \textbf{Heavy:} The character feels comfortable with Heavy Armour, incurring no malluses when wearing them. Magic-using characters \textbf{can} cast spells in any type of armour.}}
+\end{tabular}
 \chapter{Weapons n' Armour}
 \chapter{Magicks}
 \end{document}
