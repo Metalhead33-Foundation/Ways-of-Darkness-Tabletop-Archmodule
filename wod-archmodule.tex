@@ -7,6 +7,7 @@
 \usepackage{numprint}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{tabularx,booktabs}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{float}
@@ -18,6 +19,7 @@
 \usepackage{import}
 \usepackage[square,sort,comma,numbers]{natbib}
 \usepackage[a4paper, margin=1.5cm]{geometry}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \graphicspath{ {./images/} }
 \author{Metalhead33}
 \title{Ways of Darkness\\
@@ -342,13 +344,25 @@ Just like vampires, theriantropes are a special kind of undead that - through th
 \subsection{The Bard}
 \subsection{The Herbalist}
 \chapter{Feats}
-\begin{tabular}{|ccc|}
+\section{Combat Feats}
+\subsection{Armour Conditioning}
+\begin{table}[!ht]
+\centering
+%\resizebox{\textwidth}{!}{% use resizebox with textwidth
+\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
 \hline
 \multicolumn{3}{|c|}{Armour Conditioning} \\ \hline
-\import{images/Feats/}{images/Feats/Armour1.pdf_tex} & \import{images/Feats/}{images/Feats/Armour2.pdf_tex} & \import{images/Feats/}{images/Feats/Armour3.pdf_tex} \\ \hline
-Light        & Medium       & Heavy       \\ \hline
-\multicolumn{3}{|c|}{\makecell{\textbf{Untrained:} The character feels uncomfortable in armour, and a \Malus{50\%} to movement speed when wearing any sort of armour. When any calculations are made that involve Dexterity, wearing any sort of armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing any sort of armour. \\ \textbf{Light:} The character feels comfortable with Light Armour \Parentheses{Gambeson and Leather Armour}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing any armour other than Gambeson and Leather Armour. When any calculations are made that involve Dexterity, wearing Medium or Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Medium or Heavy Armour. \\  \textbf{Medium:} The character feels comfortable with Medium Armour \Parentheses{Chainmail and Scalemail}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing Heavy Armour. When any calculations are made that involve Dexterity, wearing Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Heavy Armour. \\  \textbf{Heavy:} The character feels comfortable with Heavy Armour, incurring no malluses when wearing them. Magic-using characters \textbf{can} cast spells in any type of armour.}}
-\end{tabular}
+\multicolumn{1}{|c}{\import{images/Feats/}{images/Feats/Armour1.pdf_tex}} & \multicolumn{1}{c}{\import{images/Feats/}{images/Feats/Armour2.pdf_tex}} & \multicolumn{1}{c|}{\import{images/Feats/}{images/Feats/Armour3.pdf_tex}} \\ \hline
+\multicolumn{1}{|c}{Light}        & \multicolumn{1}{c}{Medium}       & \multicolumn{1}{c|}{Heavy}       \\ \hline
+\end{tabularx}
+%}
+\end{table}
+\begin{itemize}
+	\item \textbf{Untrained:} The character feels uncomfortable in armour, and a \Malus{50\%} to movement speed when wearing any sort of armour. When any calculations are made that involve Dexterity, wearing any sort of armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing any sort of armour.
+	\item \textbf{Light:} The character feels comfortable with Light Armour \Parentheses{Gambeson and Leather Armour}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing any armour other than Gambeson and Leather Armour. When any calculations are made that involve Dexterity, wearing Medium or Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Medium or Heavy Armour.
+	\item \textbf{Medium:} The character feels comfortable with Medium Armour \Parentheses{Chainmail and Scalemail}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing Heavy Armour. When any calculations are made that involve Dexterity, wearing Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Heavy Armour.
+	\item \textbf{Heavy:} The character feels comfortable with Heavy Armour \Parentheses{Breastplates and Platemail}, incurring no malluses when wearing them. Magic-using characters \textbf{can} cast spells in any type of armour.
+\end{itemize}
 \chapter{Weapons n' Armour}
 \chapter{Magicks}
 \end{document}
