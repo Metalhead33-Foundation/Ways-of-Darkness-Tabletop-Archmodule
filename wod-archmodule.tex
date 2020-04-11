@@ -29,10 +29,15 @@
 \begin{document}
 \newcommand{\BipedalTwoArms}[3]{Being bipedal {#1}, {#3} have two hands and two legs, meaning that they can wield only two one-handed weapons \textit{(or a one-handed weapon and a shield)} or a single two-handed weapon at the same time. Just like with other bipedal {#2} races, reaching zero hitpoints on the arms or legs renders those limbs unusable \textit{(and disables the corresponding item slots)}, while reaching zero hitpoints at the torso or head means death - or unconsciousness, if house rules rule out death.}
 \newcommand{\MammalRace}[1]{\BipedalTwoArms{mammals without tails}{mammalian}{{#1}} As mammals, {#1} cannot breathe under water without magic or specifial \textit{(read: modern, therefore nonexistent in this setting)} equipment, with prolonged presence underweater leading to drowning.}
-\newcommand{\LizardRace}[1]{\BipedalTwoArms{reptoids with tails}{reptilian}{{#1}} Their tails are not a vital body part - their loss may be very painful \textit{(and cause potentially lethal bleeding, if the wound is not treated fast enough)}, the body part itself isn't vital, making its loss non-lethal. As we're talking about reptiles rather than mammmals, this species breeds by eggs rather than giving live birth; has a critical weakness towards extreme temperatures and cannot be turned into a secondary race specific to mammals. Reptiles are different from amphibians - they are \textbf{not} able to breathe underwater, and thus drown just like mammals.}
+\newcommand{\LizardRace}[1]{\BipedalTwoArms{reptoids with tails}{reptilian}{{#1}} Their tails are not a vital body part - their loss may be very painful \textit{(and cause potentially lethal bleeding, if the wound is not treated fast enough)}, the body part itself isn't vital, making its loss non-lethal. As we're talking about reptiles rather than mammmals, this species breeds by eggs rather than giving live birth; has a critical weakness towards extreme temperatures and cannot be turned into a secondary race specific to mammals. Reptiles are different from amphibians - they are \textbf{not} able to breathe underwater, and thus drown just like mammals. They cannot be infected with Vampirism or Theriantropy, because those are mammal-specific diseases.}
+\newcommand{\UndeadRace}[1]{Being undead creatures, {#1} have no need for food or water, thus the vitals for proteon, carbohydrates, fat, calories, alcohol and water are inactive for them.}
 \newcommand{\Bonus}[1]{\textcolor{green}{\textbf{+{#1} bonus}}}
+\newcommand{\BonusS}[1]{\textcolor{green}{\textbf{+{#1}}}}
 \newcommand{\Malus}[1]{\textcolor{red}{\textbf{-{#1} malus}}}
+\newcommand{\MalusS}[1]{\textcolor{red}{\textbf{-{#1}}}}
 \newcommand{\DimorphismBB}[5]{Male {#1} get a \Bonus{{#2}} to {#3}, while Female {#1} get a \Bonus{{#4}} to {#5}.}
+\newcommand{\SoCalled}[1]{\textit{``{#1}''}}
+\newcommand{\Parentheses}[1]{\textit{({#1})}}
 \maketitle
 \tableofcontents
 \chapter*{Preface}
@@ -44,7 +49,7 @@ You are currently reading the documentation of the \textbf{Ways of Darkness modu
 The \textbf{Occident} is the part of \textbf{Artograch} with perhaps the most dynamic history. While even the Occident shows a similar tendency as the Orient to have large countries dominated by a single race, it is slightly more nuanced in the Occident, which has had a history of territories changing hands. While the Orient has always been characterized by the rule of centralized and homogenous kingdoms, and highly bureaucratic and usually equally homogenous, often quasi-despotic empires, the Occident has always been a place where central authorities held only limited amount of power, with provinces enjoying high autonomy.\newline
 The various races of the Occident are divided into two major groups: the Elven races \textit{(Humans, High Elves, Wood Elves, Dark Elves, Orcs)} being descended from Oriental invaders; and the indigenous races \textit{(Goblins, Ogres, Lizardmen, Halflings, Gnomes and Dwarves)} whose population was decimated by the arrival of the earlier. Out of the two, the earlier are clearly the dominant force on the continent, with three out of the four dominant powers in the Occident being dominated by an Elven race - Etrand by Humans, Froturn by High Elves, Dragoc by Wood Elves.\newline
 Currently, as of 831 AEKE \textit{(831 years after the establishment of the Kingdom of Etrand)}, the Occident is at a tipping point: the three aforementioned great powers are at a three-way cold war with each other, with tensions being at an all-time high, while the previously unmentioned fourth, Gabyr, is sitting in the shadows watching it all with popcorn in their hands, while slowly expanding their trade empire in the Orient. Unseen for roughly five and a half centuries, Demons have been sighted lurking around, no doubt planting their own secret agents among the authorities of the aforementioned states. It is said that even the Orcs of Brutang are getting quite unruly, while the Empire of Neressa continues its long-practiced isolationist policies and the Principality of Artaburro tries to wiggle between the Kingdoms of Froturn, Dragoc and Etrand.
-\chapter{Playable races}
+\chapter{Playable Primary Races}
 \section{Humans}
 \includegraphics{Average_Humans}\newline
 \textbf{Humans} are the dominant race of the \textbf{Kingdom of Etrand} and its vassal, the \textbf{Earldom of Etrancoast}, albeit they are also present in high numbers in the \textbf{Principality of Gabyr}, constituting slightly more than half of its population, albeit they're not politically dominant there. In spite of their short lifespan - less than one century! - and their clear lack of pointy ears, humans are in fact an Elven race, descendants of those Ancestral Elves who crossed over from the Orient to colonize the Occident, making them a sister-race to the Wood Elves and High Elves, who also directly evolved out of those Ancestral Elves.\newline
@@ -59,7 +64,7 @@ The average human male is 175 centimetres \textit{(5 feet and 9 inches)} tall, w
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 8 & 18 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Humans}{1}{Strength and Endurance}{1}{Dexterity and Charisma} \MammalRace{humans}
+\DimorphismBB{Humans}{1}{Strength and Endurance}{1}{Dexterity and Charisma} \MammalRace{humans}\newpage
 \section{High Elves}
 \includegraphics{High_Elves}\newline
 \textbf{High Elves} are the dominant race of the \textbf{Kingdom of Froturn} and have a plurality in the \textbf{Empire of Neressa}, albeit their political influence expands far beyond, to the point that the Humans have adopted their religion over eight centuries ago! They have rather long lifespans, theoretically ten times that of a human \textit{(and they're also typically taller than humans, not to mention their sharp ears)}, ageing at one tenth a human's rate after reaching the age of eighteen. They descendants of those Ancestral Elves who crossed over from the Orient to colonize the Occident, making them a sister-race to the Wood Elves and Humans, who also directly evolved out of those Ancestral Elves. As an added bonus, High Elven women are deemed the most beautiful on Artograch, their fame echoing beyond the continent of Artograch, even to the Orient. The average adult High Elf is about 190 centimetres \textit{(6 feet and 3 inches)} tall, regardless of gender \textit{(albeit men to tend to be slightly taller on average)}.\newline
@@ -73,7 +78,7 @@ The average human male is 175 centimetres \textit{(5 feet and 9 inches)} tall, w
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 9 & 19 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{High Elves}{1}{Strength}{1}{Charisma} \MammalRace{High Elves}
+\DimorphismBB{High Elves}{1}{Strength}{1}{Charisma} \MammalRace{High Elves}\newpage
 \section{Wood Elves}
 \includegraphics{Wood_Elves}\newline
 \textbf{Wood Elves} are the dominant race of the \textbf{Kingdom of Dragoc}. They have rather long lifespans, theoretically ten times that of a human \textit{(and they're also typically taller than humans, not to mention their sharp ears)}, ageing at one tenth a human's rate after reaching the age of eighteen. They descendants of those Ancestral Elves who crossed over from the Orient to colonize the Occident, making them a sister-race to the High Elves and Humans, who also directly evolved out of those Ancestral Elves. As an added bonus, Wood Elven women and men are well-known for being rivals to their High Elven counterparts in regards to beauty. The average adult Wood Elf is about 190 centimetres \textit{(6 feet and 3 inches)} tall, regardless of gender \textit{(albeit men to tend to be slightly taller on average)}.\newline
@@ -87,7 +92,7 @@ The average human male is 175 centimetres \textit{(5 feet and 9 inches)} tall, w
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 8 & 18 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Wood Elves}{2}{Strength}{2}{Charisma} \MammalRace{Wood Elves}
+\DimorphismBB{Wood Elves}{2}{Strength}{2}{Charisma} \MammalRace{Wood Elves}\newpage
 \section{Dark Elves}
 \includegraphics{Dark_Elves}\newline
 \textbf{Dark Elves} are a race without a unified country, living in underground clans in dungeon-cities below the the ground, though also being present in several surface states - namely the Kingdoms of Etrand and Froturn - in high numbers as diaspora. They have rather long lifespans, theoretically ten times that of a human \textit{(and they're also typically taller than humans, not to mention their sharp ears and blue-ish grey skin)}, ageing at one tenth a human's rate after reaching the age of eighteen. They descendants of Wood Elves and High Elves who were banished after experimenting with the dark arts, creating their own exodus, where the environment - and the new religion - has altered their appearence. The average adult Dark Elf is about 180 centimetres \textit{(5 feet and 11 inches)} tall, regardless of gender \textit{(albeit men to tend to be slightly taller on average)}.\newline
@@ -101,10 +106,10 @@ The average human male is 175 centimetres \textit{(5 feet and 9 inches)} tall, w
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 8 & 18 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Dark Elves}{1}{Strength}{1}{Charisma} \MammalRace{Dark Elves}
+\DimorphismBB{Dark Elves}{1}{Strength}{1}{Charisma} \MammalRace{Dark Elves}\newpage
 \section{Half-Elves}
 \includegraphics{Half_Elves}\newline
-\textbf{Half-Elves} are hybrids of Humans and any of the aforementioned Elven races \textit{(High Elves, Wood Elves, Dark Elves)}. To be specific, this race only includes only so-called \textit{``clean hybrids''} - as in, people with 45-55\% Human blood and 45-55\% Elven blood. People where one side dominates - whether it's the Human side or Elven side - are classified as \textit{``unclean hybrids''}, and thus get shoehorned into the Human or Elven race. Their lifespan is halfway between that of a Human and Elf, thus around five times that of a human's, ageing at one fifth the rate after reaching the age of eighteen.\newline
+\textbf{Half-Elves} are hybrids of Humans and any of the aforementioned Elven races \textit{(High Elves, Wood Elves, Dark Elves)}. To be specific, this race only includes only so-called \SoCalled{clean hybrids} - as in, people with 45-55\% Human blood and 45-55\% Elven blood. People where one side dominates - whether it's the Human side or Elven side - are classified as \SoCalled{unclean hybrids}, and thus get shoehorned into the Human or Elven race. Their lifespan is halfway between that of a Human and Elf, thus around five times that of a human's, ageing at one fifth the rate after reaching the age of eighteen.\newline
 \begin{tabular}{|c|c|c|}
 \hline
  & \textbf{Min} & \textbf{Max} \\ \hline
@@ -115,10 +120,10 @@ The average human male is 175 centimetres \textit{(5 feet and 9 inches)} tall, w
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 8 & 18 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Half-Elves}{1}{Strength}{1}{Charisma} \MammalRace{Half-Elves}
+\DimorphismBB{Half-Elves}{1}{Strength}{1}{Charisma} \MammalRace{Half-Elves}\newpage
 \section{Half-Orcs}
 \includegraphics{Half_Orcs}\newline
-\textbf{Half-Orcs} are hybrids of Orcs and any of the other Elven races \textit{(Humans, High Elves, Wood Elves, Dark Elves)} - from a gameplay perspective, we don't distinguish between Orc-Human and Orc-Elf hybrids, as Orkish traits tend to be the most salient for both. To be specific, this race only includes only so-called \textit{``clean hybrids''} - as in, people with 45-55\% Orkish blood and 45-55\% Human/Elven blood. People where one side dominates - whether it's the Orkish side or Human/Elven side - are classified as \textit{``unclean hybrids''}, and thus get shoehorned into the Orkish or Human/Elven race. Their lifespan is halfway between the parent races, which would mean around 200 years for Human-Orc hybrids, 400 years for Orc-Elf hybrids.\newline
+\textbf{Half-Orcs} are hybrids of Orcs and any of the other Elven races \textit{(Humans, High Elves, Wood Elves, Dark Elves)} - from a gameplay perspective, we don't distinguish between Orc-Human and Orc-Elf hybrids, as Orkish traits tend to be the most salient for both. To be specific, this race only includes only so-called \SoCalled{clean hybrids}- as in, people with 45-55\% Orkish blood and 45-55\% Human/Elven blood. People where one side dominates - whether it's the Orkish side or Human/Elven side - are classified as \SoCalled{unclean hybrids}, and thus get shoehorned into the Orkish or Human/Elven race. Their lifespan is halfway between the parent races, which would mean around 200 years for Human-Orc hybrids, 400 years for Orc-Elf hybrids.\newline
 \begin{tabular}{|c|c|c|}
 \hline
  & \textbf{Min} & \textbf{Max} \\ \hline
@@ -129,7 +134,7 @@ The average human male is 175 centimetres \textit{(5 feet and 9 inches)} tall, w
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 7 & 17 \\ \hline
 \end{tabular}\newline
-\MammalRace{Half-Orcs}
+\MammalRace{Half-Orcs}\newpage
 \section{Orcs}
 \includegraphics{Orks}\newline
 \textbf{Orcs} are an oddball among the group of Elven races - just like Humans, they look nothing like Elves, despite being genetically descended from the Ancestral Elves, albeit indirectly: the Orcs are descendants of a group of Wood Elves who were exiled for their war crimes and subsequent rebellion against their own country's authority, first tortured then banished into the frozen wastelands of Brutang with the hopes of them dying from exposure or being killed by the native Goblins and Ogres. Instead, these exiled renegades came to dominate the natives, but for some unknown reason, their children and descendants all became green-skinned beings. Even the Orcs themselves aren't sure today how did their ancestors transition from being Wood Elves to being Orcs - perhaps a curse?\newline
@@ -144,7 +149,7 @@ Orcs have a lifespan roughly three times that of humans, which means that they a
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 6 & 16 \\ \hline
 \end{tabular}\newline
-\MammalRace{Orcs}
+\MammalRace{Orcs}\newpage
 \section{Ogres}
 \includegraphics{Ogres}\newline
 \textbf{Ogres} are a race indigenous to Artograch. Green-skinned, very muscular, very tall \textit{(average height of 250 centimetres, or 8 feet and 2.4 inches)} and very solitary, Ogres have an average lifespan of roughly twice of a human's. Before the arrival of the Orcs, Ogres had a symbiotic relationship with the Goblins: the thriftly Goblins visited foreign places to bring back foreign goods to enrich the land and the ogres, while the Ogres protected the land with their strong hands and xenophobia, giving the Goblins a good base of operations. This all changed with the arrival of the Orcs, who enslaved the Ogres using them for forced labour until they began fighting for emancipation, winning that fight in the more liberal-minded clans. Despite no longer being collectively enslaved by most Orkish clans anymore, Ogres are still somewhat of outsiders in Orkish societies, preferring to stay out of clan politics and abstain from aspiring for high positions in them.\newline
@@ -158,7 +163,7 @@ Orcs have a lifespan roughly three times that of humans, which means that they a
 \textbf{Willpower} & 7 & 17 \\ \hline
 \textbf{Charisma} & 6 & 16 \\ \hline
 \end{tabular}\newline
-\MammalRace{Ogres}
+\MammalRace{Ogres}\newpage
 \section{Goblins}
 \includegraphics{Goblins}\newline
 \textbf{Goblins} are a race indigenous to Artograch. Green-skinned, small \textit{(average of 110 cm, or 3 feet and 7.3 inches)}, agile and undemanding  they can live and thrive in just about any place: from the hot and scorching desert to the arctic wasteland. Thanks to their small size, they do not need big houses. Their small and agile fingers are good to hunting smaller animals and using bows. Their in-born night vision allows them to see in the darkness. They are much quicker and less noisy than the Orcs, which why is why the Orcish tribes of Brutang love employing them as scouts.\newline
@@ -174,10 +179,10 @@ The Goblin race contains three subraces: Night Goblins, Wood Goblins and Hobgobl
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 7 & 17 \\ \hline
 \end{tabular}\newline
-Hobgoblins get a \Bonus{2} bonus to Strength, Night Goblins get a \Bonus{2} to Dexterity, Wood Goblins get a \Bonus{1} to both Strength and Dexterity. \MammalRace{Goblins}
+Hobgoblins get a \Bonus{2} bonus to Strength, Night Goblins get a \Bonus{2} to Dexterity, Wood Goblins get a \Bonus{1} to both Strength and Dexterity. \MammalRace{Goblins}\newpage
 \section{Halflings}
 \includegraphics{Hobbits}\newline
-\textbf{Halflings} are a race indigenous to Artograch, with an average lifespan of 150 years, and average height of 130 centimetres or 4 feet and 3.1 inches. Due to the fact that they are rather short-statued humanoid mammals and speak a language related to Dwarven, they are sometimes grouped in with the Dwarves and Gnomes as the \textit{``Norlokian races''}, even though they are incapable of interbreeding with each other, and thus may not even be biologically related, despite the superficial resemblance.\newline
+\textbf{Halflings} are a race indigenous to Artograch, with an average lifespan of 150 years, and average height of 130 centimetres or 4 feet and 3.1 inches. Due to the fact that they are rather short-statued humanoid mammals and speak a language related to Dwarven, they are sometimes grouped in with the Dwarves and Gnomes as the \SoCalled{Norlokian races}, even though they are incapable of interbreeding with each other, and thus may not even be biologically related, despite the superficial resemblance.\newline
 Halflings are a race of smart, inventive survivors and adventurers, known for their curiousity and boldness. They are easily seduced by riches, but they prefer spending money, for they are a race definitely not made famous by their frugality. Their skin is ruddy, their hair is typically either black, brown or red, and either straight or curly \textit{(never wavy)}, and their eyes are usually brown or black. Halfling men very often grow out their sideburns, but seldom do they also grow a beard or mustache. They prefer dressing for comfort and practicality, and in spite of their love of riches, they typically shun jewellery. They love to enjoy the little things in life, such as smoking their pipes.\newline
 \begin{tabular}{|c|c|c|}
 \hline
@@ -189,11 +194,11 @@ Halflings are a race of smart, inventive survivors and adventurers, known for th
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 8 & 18 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Halflings}{1}{Strength and Endurance}{1}{Dexterity and Charisma} \MammalRace{Halflings}
+\DimorphismBB{Halflings}{1}{Strength and Endurance}{1}{Dexterity and Charisma} \MammalRace{Halflings}\newpage
 \section{Gnomes}
 \includegraphics{Gnomes}\newline
-\textbf{Gnomes} are a race indigenous to Artograch, with an average lifespan of 300 years, and average height of 100 centimetres or 3 feet and 3.37 inches. Due to the fact that they are rather short-statued humanoid mammals and speak the Dwarven language, they are sometimes grouped in with the Dwarves and Halflings as the \textit{``Norlokian races''}, even though they are incapable of interbreeding with each other, and thus may not even be biologically related, despite the superficial resemblance.\newline
-The Gnomes are a race like no other. While the Dwarves, Humans, Elves and even the self-proclaimed \textit{``spiritual''} Lizardmen love gossiping about just about everything, from politics to the petty personal matters of anyone who isn’t present, the gnomes are a whole different world. They discuss science and magic, not tratsch. Gnomish genius knows no limits. They construct complex machines, golems, clockwork engines, and even more. In addition to mastering mechanics, gnomes also excel at alchemy. While the Elves - especially the Wood Elves - are unrivalled masters of Herbalism and potion-making, the Gnomes prefer to explore the more obscure yet powerful side of Alchemy: transmutation. The art of turning worthless rock into diamonds and mere paper into gold is a dangerous art mastered only by the bravest of souls.\newline
+\textbf{Gnomes} are a race indigenous to Artograch, with an average lifespan of 300 years, and average height of 100 centimetres or 3 feet and 3.37 inches. Due to the fact that they are rather short-statued humanoid mammals and speak the Dwarven language, they are sometimes grouped in with the Dwarves and Halflings as the \SoCalled{Norlokian races}, even though they are incapable of interbreeding with each other, and thus may not even be biologically related, despite the superficial resemblance.\newline
+The Gnomes are a race like no other. While the Dwarves, Humans, Elves and even the self-proclaimed \SoCalled{spiritual} Lizardmen love gossiping about just about everything, from politics to the petty personal matters of anyone who isn’t present, the gnomes are a whole different world. They discuss science and magic, not tratsch. Gnomish genius knows no limits. They construct complex machines, golems, clockwork engines, and even more. In addition to mastering mechanics, gnomes also excel at alchemy. While the Elves - especially the Wood Elves - are unrivalled masters of Herbalism and potion-making, the Gnomes prefer to explore the more obscure yet powerful side of Alchemy: transmutation. The art of turning worthless rock into diamonds and mere paper into gold is a dangerous art mastered only by the bravest of souls.\newline
 The gnomes have been living side-by-side with the dwarves for 5000 years, and against all odds, they kept their own culture, as a separate race - which is understandable, given how they are biologically incapable of interbreeding with Dwarves. Although gnomes are widely employed as alchemists, inventors and artillery engineers, they prefer to live amongst their own kind. They are fond of animals, gemstones, jokes and pranks. They like learning things in a personal way, and they always try to build up things by a new way.\newline
 \begin{tabular}{|c|c|c|}
 \hline
@@ -205,10 +210,10 @@ The gnomes have been living side-by-side with the dwarves for 5000 years, and ag
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 8 & 18 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Gnomes}{1}{Strength and Endurance}{1}{Dexterity and Charisma} \MammalRace{Gnomes}
+\DimorphismBB{Gnomes}{1}{Strength and Endurance}{1}{Dexterity and Charisma} \MammalRace{Gnomes}\newpage
 \section{Dwarves}
 \includegraphics{Dwarves}\newline
-\textbf{Dwarves} are a race indigenous to Artograch, with an average lifespan of 200 years, and average height of 120 centimetres or 3 feet and 11.2 inches. Due to the fact that they are rather short-statued humanoid mammals and speak a language related to Halfling, they are sometimes grouped in with the Halflings and Gnomes as the \textit{``Norlokian races''}, even though they are incapable of interbreeding with each other, and thus may not even be biologically related, despite the superficial resemblance.\newline
+\textbf{Dwarves} are a race indigenous to Artograch, with an average lifespan of 200 years, and average height of 120 centimetres or 3 feet and 11.2 inches. Due to the fact that they are rather short-statued humanoid mammals and speak a language related to Halfling, they are sometimes grouped in with the Halflings and Gnomes as the \SoCalled{Norlokian races}, even though they are incapable of interbreeding with each other, and thus may not even be biologically related, despite the superficial resemblance.\newline
 The Dwarves are one of the most easily recognizable races of Artograch. Short but muscular statue, crude humour, mild xenophobia, fondness for beer and women, you will almost instantly recognize the dwarf. Having been a closed people for millennia, dwarves are not very trusting with foreigners \textit{(other than the gnomes whom they don’t really consider foreigners at all)}, but they are generous with the ones who earn their trust. They are also known for their talent at blacksmithing, mining and melee weapons. Dwarven steel is universally considered the best material for making both weapons and armour, and no one can deny the beauty of dwarven-made ornaments that decorate armour and weapons that would be already considered nicely-made even without them. Dwarves’ skin colour can vary from yellowish brown to pale white. A dwarf's hair colour can be blond, red, brown or black. In Dwarven society, if a male does not have a beard, he isn't considered male. Traditionally, the dwarves lived in clans that constantly bickered amongst each other, but historical events six centuries ago changed all of that.\newline
 \begin{tabular}{|c|c|c|}
 \hline
@@ -218,9 +223,9 @@ The Dwarves are one of the most easily recognizable races of Artograch. Short bu
 \textbf{Dexterity} & 8 & 18 \\ \hline
 \textbf{Intelligence} & 8 & 18 \\ \hline
 \textbf{Willpower} & 8 & 18 \\ \hline
-\textbf{Charisma} & 7 & 19 \\ \hline
+\textbf{Charisma} & 7 & 17 \\ \hline
 \end{tabular}\newline
-\DimorphismBB{Dwarves}{1}{Strength}{1}{Charisma} \MammalRace{Dwarves}
+\DimorphismBB{Dwarves}{1}{Strength}{1}{Charisma} \MammalRace{Dwarves}\newpage
 \section{Lizardmen}
 \includegraphics{Average_Lizardman}\newline
 \textbf{Lizardmen} are a cold-blooded reptiles \textit{(varanids to be specific)}, mainly characterized by thick scales, sharp thinking and high level of endurance. They populate mainly swamps and sylvan mountains. They tolerate all sorts of climates and terrains, with the exception of very low temperature: cold is their weak point. Unlike normal lizards, they mainly eat meat, but they never prey on sentiment beings \textit{(like Humans)}, they also like fruits, but they never eat grains/cereals \textit{(nor alcoholic beverage made out of it)}. Weaker lizardmen live at least 900 years, while the stronger could live up to 1300 years. The colour of the scales can vary regardless of gender. Their eyes can be green, yellow or orange. On average, they weight 70 kilograms or 155 pounds and are 175 centimetres or 5 feet and 9 inches tall.\newline
@@ -236,7 +241,78 @@ They live in smaller or bigger communities, but it’s not rare for the younger 
 \textbf{Willpower} & 8 & 18 \\ \hline
 \textbf{Charisma} & 4 & 14 \\ \hline
 \end{tabular}\newline
-\LizardRace{Lizardmen}
+\LizardRace{Lizardmen}\newpage
+\chapter{Non-Playable Primary Races}
+\textbf{Non-PLayable races} are races that, while not explicitly forbidden, are not recommended for usage as player characters for various reasons. They will not be playable in any of the video game adaptations either, and they are not recommended for tabletop usage either, other than as NPCs controlled by the game master. The reasons for this vary a lot, but boil down to these so-called \SoCalled{non-playable races} being...
+\begin{itemize}
+	\item ...unballanced, thus giving players who control them an unfair \Parentheses{dis}advantage.
+	\item ...not as fleshed out as the so-called so-called \SoCalled{playable races}
+	\item ...not fitting into the traditional formula of characters having attributes, classes and equipment. As a rule of thumb, non-bipedal races are automatically non-playable in the Occident.
+\end{itemize}
+As previously stated, while playing as characters from these races is not explicitly forbidden per se, it is genuinely not recommended for game masters to let players create characters from these races. These races will also be non-playable in any future video game adaptations.
+\section{Nereids}
+\textbf{Nereids} - also called \textbf{Mermaids and Mermen - are the politically dominant race of the Free City of Gabyr, in spite of only constituting 26.72\% of its population.\newline
+\begin{tabular}{|c|c|c|}
+\hline
+ & \textbf{Min} & \textbf{Max} \\ \hline
+\textbf{Strength} & 8 & 18 \\ \hline
+\textbf{Endurance} & 10 & 20 \\ \hline
+\textbf{Dexterity} & 10 & 20 \\ \hline
+\textbf{Intelligence} & 10 & 20 \\ \hline
+\textbf{Willpower} & 10 & 20 \\ \hline
+\textbf{Charisma} & 10 & 20 \\ \hline
+\end{tabular}\newline
+Nereids look like mammals above the hip, but hash fish bodies under the hips. This means that they have two hands - allowing them to use two one-handed weapons or a single two-handed weapon at a time, or a single one-handed weapon and a shield. They have their torso and their head, but lack legs - instead, they have a large tail, whose loss is just as lethal as the loss of their torso or head. They have the same vitals as other mortal creatures, but they cannot be infected with vampirism or theriantropy.\newpage
+\section{Demons}
+\section{Angels}
+\section{Dragons}
+\section{Griffins}
+\section{Winged Cobras}
+\chapter{Secondary Races}
+\textbf{Secondary races} are races that people aren't usually born into, but instead are turned into, usually via some sort of magic. Most secondary races are undead, and their condition is caused by a symbiotic relationship between their own animated corpse and a tiny creature that is responsible for the animation: the only cure to such a condition is a final death.
+\section{Liches}
+\textbf{Liches} are sentient undead creatures who resemble skeletons, but are in fact a power to be reckoned with, as the ritual of transformation in which liches are made is lethal to anyone who doesn't possess sufficient amount of magical power to have all of their body \Parentheses{save for their bones} burn away, yet live. In exchange for the efforts taken prior to the ritual and the excruciating pain sustained during the ritual, they gain eternal life, increased magical powers and being freed from various other mortal restraints, such as mortal needs and mortal desires.\newline
+\begin{tabular}{|c|c|c|}
+\hline
+ & \textbf{Bonus/Malus} \\ \hline
+\textbf{Strength} & \textit{unchanged} \\ \hline
+\textbf{Endurance} & \textit{unchanged}  \\ \hline
+\textbf{Dexterity} & \textit{unchanged}  \\ \hline
+\textbf{Intelligence} & \BonusS{6} \\ \hline
+\textbf{Willpower} & \BonusS{6} \\ \hline
+\textbf{Charisma} & \MalusS{4} \\ \hline
+\end{tabular}\newline
+\UndeadRace{Liches}\newpage
+\section{Vampires}
+\textbf{Vampires} are sentient undead creatures who - unlike Liches - largely retain their original mortal looks, albeit with a few characteristics \Parentheses{paler skin, unnatural eye colours, more prominent, pointy and sharp canine teeth}. Unlike lichdoom - which is a condition caused by a ritual - vampirism is caused by a parasitical organism infecting a living sentient mammal, killing it and reanimating its body, sharing control over the body with the original brains and soul, establishing a symbiotic relationship, just like with theriantropes. The parasite demands blood, and will drive the vampire to utter madness \Parentheses{and eventually bodily decay} if it is not delivered, but in exchange, it grants the vampire eternal life, liberation from mortal needs for food and water, as well as superior physical power. In spite of being undead creatures who are supposed to be clinically dead, those who are turned vampires prematurely will still physically mature into adults capable of sexual reproduction: the parsite inside them makes sure, that as long as they are fed with enough blood at regular intervals, some of their mortal functions will continue to work, such as the ones responsible for growing into an adult, for appreciating the taste of mortal food and beverages, and for sexual reproduction - but woe be to a vampire who neglects feeding, as they will begin to experience both bodily decay and mental degeneration.\newline
+So-called \SoCalled{pure-blooded vampires} \Parentheses{the offsprings of two vampires} and \SoCalled{half-vampires} \Parentheses{the offsprings of a mortal and vampire} are immune to the harsh rays of the sun from birth, while to regular vampires, the scorching touch of the sun is lethal for roughly three centuries, during which they gradually build up an immunity and gain resistance to it.\newline
+The parasite that causes vampirism is one very prone to mutation, which explains the high diversity of vampire clans with different powers unique to them.\newline
+\begin{tabular}{|c|c|c|}
+\hline
+ & \textbf{Bonus/Malus} \\ \hline
+\textbf{Strength} & \BonusS{4} \\ \hline
+\textbf{Endurance} & \BonusS{4}  \\ \hline
+\textbf{Dexterity} & \textit{unchanged}  \\ \hline
+\textbf{Intelligence} & \textit{unchanged} \\ \hline
+\textbf{Willpower} & \textit{unchanged} \\ \hline
+\textbf{Charisma} & \textit{unchanged} \\ \hline
+\end{tabular}\newline
+\UndeadRace{Vampires} Instead, they activate a need for Blood, their own unique vital shared with Theriantropes.\newpage
+\section{Theriantropes}
+\textbf{Theriantropes} are sentient undead creatures who - unlike Liches - largely retain their original mortal looks, albeit they take on certain animal motiffs, such as the smell of a wild animal and character tics associated with said animal. The condition of theriantropy shares a lot with Vampirism, such as the fact that it is caused by a parasite that kills its host and reanimates the host's corpse as an undead creature, allowing them retain free will, but still influencing them, giving them powers in exchange for blood. On every full moon, young theriantropes go through an involuntary transformation that makes them lose their free will, turning them into berserkers driven by lust for blood - they also go through a physical transformation, from their original form into a bipedal animal \Parentheses{wolf, bear, boar, rat, lion, tiger, etc.}. As theriantropes grow older and stronger, they gradually learn to control their condition, transforming at will, and retaining their free will even when transformed.\newline
+Just like how vampirism comes in various forms, theriantropy does to come in many forms, with werewolves \Parentheses{also known as lycantropes} being far by the most common type of theriantrope. Other kinds of theriantropes include werebears, wereboars, wererats, werelions and weretigers. The differences between these were-animals is largely cosmetic, with the common denominator being the fact that they are undead beings stronger than regular mortals, go through involuntary transformations when young, and obstain the smell and character tics of the associated animal.\newline
+Just like vampires, theriantropes are a special kind of undead that - through their symbiosis with the parasite - can still get to mingle with mortals, appreciate the taste of mortal food and beverages, reproduce sexually and grow into adulthood when turned prematurely when fed with sufficient amount of blood at regular intervals. However, lack of blood causes involuntary transformations and loss of control first, then the decaying of their body.\newline
+\begin{tabular}{|c|c|c|}
+\hline
+ & \textbf{Bonus/Malus} \\ \hline
+\textbf{Strength} & \BonusS{4} \\ \hline
+\textbf{Endurance} & \BonusS{4}  \\ \hline
+\textbf{Dexterity} & \textit{unchanged}  \\ \hline
+\textbf{Intelligence} & \textit{unchanged} \\ \hline
+\textbf{Willpower} & \textit{unchanged} \\ \hline
+\textbf{Charisma} & \textit{unchanged} \\ \hline
+\end{tabular}\newline
+\UndeadRace{Theriantropes} Instead, they activate a need for Blood, their own unique vital shared with Vampires.\newpage
 \chapter{Classes}
 \section{Fighter Type Classes}
 \subsection{The \textit{(Occidental)} Mercenary}
