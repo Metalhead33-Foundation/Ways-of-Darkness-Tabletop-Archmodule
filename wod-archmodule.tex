@@ -1,4 +1,4 @@
-\documentclass[openany,11pt,a4paper]{book}
+\documentclass[openany,10pt,a4paper]{book}
 \usepackage{graphicx}
 \usepackage[utf8x]{inputenc}
 \usepackage{multirow}
@@ -42,6 +42,13 @@
 \newcommand{\DimorphismBB}[5]{Male {#1} get a \Bonus{{#2}} to {#3}, while Female {#1} get a \Bonus{{#4}} to {#5}.}
 \newcommand{\SoCalled}[1]{\textit{``{#1}''}}
 \newcommand{\Parentheses}[1]{\textit{({#1})}}
+\newcommand{\FeatIII}[7]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
+\hline
+\multicolumn{3}{|c|}{{#4}} \\ \hline
+\multicolumn{1}{|c}{{#5}} & \multicolumn{1}{c}{{#6}} & \multicolumn{1}{c|}{{#7}} \\ \hline
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline
+\end{tabularx}}
+
 \maketitle
 \tableofcontents
 \chapter*{Preface}
@@ -348,57 +355,93 @@ Just like vampires, theriantropes are a special kind of undead that - through th
 \subsection{Armour Conditioning}
 \begin{table}[!ht]
 \centering
-%\resizebox{\textwidth}{!}{% use resizebox with textwidth
-\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
-\hline
-\multicolumn{3}{|c|}{Armour Conditioning} \\ \hline
-\multicolumn{1}{|c}{\import{images/Feats/}{images/Feats/Armour1.pdf_tex}} & \multicolumn{1}{c}{\import{images/Feats/}{images/Feats/Armour2.pdf_tex}} & \multicolumn{1}{c|}{\import{images/Feats/}{images/Feats/Armour3.pdf_tex}} \\ \hline
-\multicolumn{1}{|c}{Light}        & \multicolumn{1}{c}{Medium}       & \multicolumn{1}{c|}{Heavy}       \\ \hline
-\end{tabularx}
-%}
+\FeatIII{Light}{Medium}{Heavy}{Armour Conditioning}{{\import{images/Feats/}{images/Feats/Armour1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Armour2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Armour3.pdf_tex}}}
 \end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Light:} Not Monk.
+	\item \textbf{Medium:} Fighter-type class, Scout, Battlemage, Priest, Inquisitor or Knight.
+	\item \textbf{Heavy:} Fighter-type class, Battlemage or Knight.
+\end{itemize}
+\textbf{Effects:}
 \begin{itemize}
 	\item \textbf{Untrained:} The character feels uncomfortable in armour, and a \Malus{50\%} to movement speed when wearing any sort of armour. When any calculations are made that involve Dexterity, wearing any sort of armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing any sort of armour.
 	\item \textbf{Light:} The character feels comfortable with Light Armour \Parentheses{Gambeson and Leather Armour}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing any armour other than Gambeson and Leather Armour. When any calculations are made that involve Dexterity, wearing Medium or Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Medium or Heavy Armour.
 	\item \textbf{Medium:} The character feels comfortable with Medium Armour \Parentheses{Chainmail and Scalemail}, uncomfortable in anything heavier, thus incurring a \Malus{50\%} to movement speed when wearing Heavy Armour. When any calculations are made that involve Dexterity, wearing Heavy armour counts as a \Malus{2} to Dexterity. Magic-using characters also cannot cast spells when wearing Heavy Armour.
 	\item \textbf{Heavy:} The character feels comfortable with Heavy Armour \Parentheses{Breastplates and Platemail}, incurring no malluses when wearing them. Magic-using characters \textbf{can} cast spells in any type of armour.
-\end{itemize}
+\end{itemize}\newpage
 \subsection{Bladed Weapons}
 \begin{table}[!ht]
 \centering
-%\resizebox{\textwidth}{!}{% use resizebox with textwidth
-\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
-\hline
-\multicolumn{3}{|c|}{Bladed Weapons} \\ \hline
-\multicolumn{1}{|c}{\import{images/Feats/}{images/Feats/Blade1.pdf_tex}} & \multicolumn{1}{c}{\import{images/Feats/}{images/Feats/Blade2.pdf_tex}} & \multicolumn{1}{c|}{\import{images/Feats/}{images/Feats/Blade3.pdf_tex}} \\ \hline
-\multicolumn{1}{|c}{Basic}        & \multicolumn{1}{c}{Advanced}       & \multicolumn{1}{c|}{Expert}       \\ \hline
-\end{tabularx}
-%}
+\FeatIII{Basic}{Advanced}{Expert}{Bladed Weapons}{{\import{images/Feats/}{images/Feats/Blade1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Blade2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Blade3.pdf_tex}}}
 \end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} Cannot be Cleric-type or Druid-type class, except Knight, Ranger or Bard.
+	\item \textbf{Advanced:} Fighter or Rogue-type class, or Battlemage, Spellthief, Knight, Ranger or Bard.
+	\item \textbf{Expert:} Fighter or Rogue-type class, or Battlemage, Spellthief, Knight, Ranger or Bard.
+\end{itemize}
+\textbf{Effects:}
 \begin{itemize}
 	\item \textbf{Untrained:} The character always deals minimal damage with bladed weapons, no need to roll the dice. They also get a \Malus{2} to Dexterity when it's being counted when using bladed weapons.
 	\item \textbf{Basic:} The character suffers no bonuses or maluses when using bladed weapons.
 	\item \textbf{Advanced:} The character reiceves a \Bonus{25\%} to all damage done by bladed weapons, and a \Bonus{25\%} to chance to hit or cause critical damage.
 	\item \textbf{Expert:} The character reiceves a \Bonus{50\%} to all damage done by bladed weapons, and a \Bonus{50\%} to chance to hit or cause critical damage.
-\end{itemize}
+\end{itemize}\newpage
 \subsection{Bows}
 \begin{table}[!ht]
 \centering
-%\resizebox{\textwidth}{!}{% use resizebox with textwidth
-\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
-\hline
-\multicolumn{3}{|c|}{Bows} \\ \hline
-\multicolumn{1}{|c}{\import{images/Feats/}{images/Feats/Ranged1.pdf_tex}} & \multicolumn{1}{c}{\import{images/Feats/}{images/Feats/Ranged2.pdf_tex}} & \multicolumn{1}{c|}{\import{images/Feats/}{images/Feats/Ranged3.pdf_tex}} \\ \hline
-\multicolumn{1}{|c}{Basic}        & \multicolumn{1}{c}{Advanced}       & \multicolumn{1}{c|}{Expert}       \\ \hline
-\end{tabularx}
-%}
+\FeatIII{Basic}{Advanced}{Expert}{Bows}{{\import{images/Feats/}{images/Feats/Ranged1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Ranged2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Ranged3.pdf_tex}}}
 \end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} Cannot be Cleric-type or Druid-type class, except Ranger or Bard.
+	\item \textbf{Advanced:} Fighter or Rogue-type class, or Battlemage, Spellthief, Ranger or Bard.
+	\item \textbf{Expert:} Sharpshooter class.
+\end{itemize}
+\textbf{Effects:}
 \begin{itemize}
 	\item \textbf{Untrained:} The character always deals minimal damage with bows, no need to roll the dice. They also get a \Malus{2} to Dexterity when it's being counted when using bows. In video game adaptations, this should halve the effective range of all bows.
-	\item \textbf{Basic:} The character suffers no bonuses or maluses when using ranged weapons.
+	\item \textbf{Basic:} The character suffers no bonuses or maluses when using bows.
 	\item \textbf{Advanced:} The character reiceves a \Bonus{25\%} to all damage done by bows, and a \Bonus{25\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
 	\item \textbf{Expert:} The character reiceves a \Bonus{50\%} to all damage done by bows, and a \Bonus{50\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
+\end{itemize}\newpage
+\subsection{Crossbows}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Crossbows}{{\import{images/Feats/}{images/Feats/Crossbow1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Crossbow2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Crossbow3.pdf_tex}}}
+\end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} Cannot be Cleric-type or Druid-type class, except Ranger or Bard.
+	\item \textbf{Advanced:} Fighter or Rogue-type class, or Battlemage, Spellthief, Ranger or Bard.
+	\item \textbf{Expert:} Sharpshooter class or Rogue-type class.
 \end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character needs to skip a turn before using a crossbow to reload every single time they want to shoot. They also get a \Malus{2} to Dexterity when it's being counted when using crossbows. In video game adaptations, this should halve the effective range of all bows.
+	\item \textbf{Basic:} The character suffers no bonuses or maluses when using crossbows, and can reload fast enough to not to skip a turn doing it.
+	\item \textbf{Advanced:} The character reiceves a \Bonus{25\%} to all damage done by crossbows, and a \Bonus{25\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
+	\item \textbf{Expert:} The character reiceves a \Bonus{50\%} to all damage done by crossbows, and a \Bonus{50\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
+\end{itemize}\newpage
+\subsection{Firearms}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Firearms}{{\import{images/Feats/}{images/Feats/Gun1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Gun2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Gun3.pdf_tex}}}
+\end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} Cannot be Cleric-type or Druid-type class, except Ranger or Bard, unless character's race is Gnome or Dwarf.
+	\item \textbf{Advanced:} Cannot be Cleric-type or Druid-type class, except Ranger or Bard, unless character's race is Gnome or Dwarf.
+	\item \textbf{Expert:} Sharpshooter or Mercenary class, Magician-type class, or any class if character's race is Gnome or Dwarf.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character doesn't know how to use firearms, and even when shown, will easily forget it. Acquired knowledge lasts less than a day, and even so, the character takes at least two turns to reload a gun before being able to use it. In video game adaptations, this should also halve the gun's effective range.
+	\item \textbf{Basic:} The character got the hang of using firearms, and takes just one turn to reload a gun before using it. 
+	\item \textbf{Advanced:} The character reiceves a \Bonus{25\%} to all damage done by guns, and a \Bonus{25\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
+	\item \textbf{Expert:} The character reiceves a \Bonus{50\%} to all damage done by guns, and a \Bonus{50\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
+\end{itemize}\newpage
 \chapter{Weapons n' Armour}
 \chapter{Magicks}
 \end{document}
