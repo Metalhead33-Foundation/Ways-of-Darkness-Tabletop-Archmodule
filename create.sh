@@ -7,7 +7,7 @@ touch -d @$(stat -c "%Y" "$src_file") "$dst_file"
 }
 for i in ./images/Feats/*.svg; do
 	if [[ ! -f "${i/.svg/.pdf}" || "$i" -nt "${i/.svg/.pdf}" ]] ; then
-	inkscape -D -z "$i" --export-file="${i/.svg/.pdf}" --export-latex
+	inkscape -D -z "$i" --export-area-page --export-file="${i/.svg/.pdf}" --export-latex
 	cpstamp "$i" "${i/.svg/.pdf}"
 	cpstamp "$i" "${i/.svg/.pdf_tex}"
 	fi
