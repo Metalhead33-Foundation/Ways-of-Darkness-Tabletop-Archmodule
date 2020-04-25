@@ -19,7 +19,7 @@
 \usepackage{import}
 \usepackage[square,sort,comma,numbers]{natbib}
 \usepackage[a4paper, margin=1.5cm]{geometry}
-\setcounter{tocdepth}{2}
+%\setcounter{tocdepth}{2}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \graphicspath{ {./images/} }
 \author{Metalhead33}
@@ -43,6 +43,11 @@
 \newcommand{\DimorphismBB}[5]{Male {#1} get a \Bonus{{#2}} to {#3}, while Female {#1} get a \Bonus{{#4}} to {#5}.}
 \newcommand{\SoCalled}[1]{\textit{``{#1}''}}
 \newcommand{\Parentheses}[1]{\textit{({#1})}}
+\newcommand{\FeatI}[2]{\begin{tabular}{|c|}
+\hline
+{#1} \\ \hline
+{\resizebox{.2\linewidth}{!}{{#2}}} \\ \hline
+\end{tabular}}
 \newcommand{\FeatIII}[7]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
 \hline
 \multicolumn{3}{|c|}{{#4}} \\ \hline
@@ -528,6 +533,23 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Expert:} The character can make forgeries that will fool just about everyone, save for true experts.
 \end{itemize}\newpage
 \subsection{Seamanship}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Seamanship}{{\import{images/Feats/}{images/Feats/Semenship1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Semenship2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Semenship3.pdf_tex}}}
+\end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None, unless your background forbids it.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} You almost instantly get seasick the moment your ship disembarks.
+	\item \textbf{Basic:} Dummy
+	\item \textbf{Advanced:} Dummy
+	\item \textbf{Expert:} Dummy
+\end{itemize}\newpage
 \subsection{Tracking}
 \begin{table}[!ht]
 \centering
@@ -566,6 +588,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 \end{itemize}\newpage
 \section{Magic Feats}
 \subsection{Magica Profana}
+\begin{table}[!ht]
+\centering
+\FeatI{Magica Profana}{{\import{images/Feats/}{images/Feats/Wizardry.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Trained:} Character must not have the feat \textbf{Magica Divinitatis} or \textbf{Magica Naturae} in order to take up this feat. Additionally, in a serious and realistic tabletop setting - where no one can just learn magic overnight - it should be up to the GM's discression to decide whether characters who didn't already have this feat in the first place should be allowed to take it up during an adventure.
@@ -576,6 +602,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Trained:} The character can use Arcane Magic, and can learn spells and other magic-related feats. The character also gains the Basic Spells \textit{(Telekinessis, Lighting, Energy Bolt)}.
 \end{itemize}\newpage
 \subsection{Magica Divinitatis}
+\begin{table}[!ht]
+\centering
+\FeatI{Magica Divinitatis}{{\import{images/Feats/}{images/Feats/Clericalism.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Trained:} Character must not have the feat \textbf{Magica Profana} or \textbf{Magica Naturae} in order to take up this feat. Additionally, in a serious and realistic tabletop setting - where no one can just learn magic overnight - it should be up to the GM's discression to decide whether characters who didn't already have this feat in the first place should be allowed to take it up during an adventure \textit{(and even so, only religious characters should be allowed to take this up)}.
@@ -586,6 +616,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Trained:} The character can use Clerical Magic, and can learn spells and other magic-related feats - albeit he/she is limited by what his/her religion allows. The character also gains the Basic Spells \textit{(Telekinessis, Lighting, Energy Bolt)}.
 \end{itemize}\newpage
 \subsection{Magica Naturae}
+\begin{table}[!ht]
+\centering
+\FeatI{Magica Naturae}{{\import{images/Feats/}{images/Feats/Druidism.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Trained:} Character must not have the feat \textbf{Magica Divinitatis} or \textbf{Magica Divinitatis} in order to take up this feat. Additionally, in a serious and realistic tabletop setting - where no one can just learn magic overnight - it should be up to the GM's discression to decide whether characters who didn't already have this feat in the first place should be allowed to take it up during an adventure.
@@ -741,6 +775,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 \end{itemize}\newpage
 \section{Social Feats}
 \subsection{Etiquette}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Etiquette}{{\import{images/Feats/}{images/Feats/Etiquette1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Etiquette2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Etiquette3.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Basic:} None, unless your background forbids it.
@@ -755,6 +793,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Expert:} The character feels right at home among people of the upper echelons, and can have his/her way with the tongue of those upper-class peons - so much so that, the character gains an advantage at persuading them - effects up to DM discression, or a \Bonus{2} to Charisma when talking to upper-class people.
 \end{itemize}\newpage
 \subsection{Street Smarts}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Street Smarts}{{\import{images/Feats/}{images/Feats/StreetSmarts1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/StreetSmarts2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/StreetSmarts3.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Basic:} None, unless your background forbids it.
@@ -787,13 +829,14 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Expert:} The character can practically smuggle high explosives into the royal palace without anyone so much as raising an eyebrow.
 \end{itemize}\newpage
 \chapter{Backgrounds}
-\subsubsection{Silver Spoon}
+\section{Silver Spoon}
 You were born into and raised as a member of a family belonging to the upper echelons of society. This means you have connections, you know people of importance, and you are known by people of importance. All well and good, but your pampered and sheltered childhood has spoiled you, reducing your ability to learn.\newline
 \textbf{Bonuses:}
 \begin{itemize}
 	\item \Bonus{2} to Charisma
 	\item You start with the Advanced Etiquette feat
 	\item Higher-class people will have a higher opinion of you than they otherwise would. \textit{(enforcement up to the GM)}
+	\item High amount of starting money.
 \end{itemize}
 \textbf{Maluses:}
 \begin{itemize}
@@ -802,17 +845,34 @@ You were born into and raised as a member of a family belonging to the upper ech
 	\item Lower-class people will have a lower opinion of you than they otherwise would. \textit{(enforcement up to the GM)}
 	\item Slower learning and experience \textit{(enforcement up to the GM - in a video game, this should be a malus to experience gain)}
 \end{itemize}
-\subsubsection{Pirate}
-Ahoy, ye scurvy dog! Never feeling quite at home among all those landlubbers, you made the seven seas your home, constantly on the hunt for poorly defended ships full of loot and plunder! You know the open waters like the palm of your own hand, and it is more than obvious that an encounter with you won't be plasant for any merchant ships. Yarrrr!\newline
+\section{The Negotiator}
+Ever since an early stage of your life, you have discovered a unique talent of yours: you always had a way with words. Whether you were speaking the slang of the lower-class cad or the flowery poetry of the upper-class peon, you always had a way with words, which saved your butt several times in your life. Of course, being able to talk your way out of every uncomfortable situation had the negative effect of stunting the your growth in other areas - after all, why would you bother learning how to fight, if you can just talk the monster to death?\newline
 \textbf{Bonuses:}
 \begin{itemize}
-	\item Dummy
+	\item \Bonus{2} to Charisma
+	\item You start with the Basic Etiquette feat
+	\item You start with the Basic Street Smarts feat
+	\item You choose between receiving Advanced Etiquette or Advanced Street Smarts for free
 \end{itemize}
 \textbf{Maluses:}
 \begin{itemize}
-	\item Dummy
+	\item You can only choose 3 feats at the beginning, instead of the usual 6.
+	\item \Malus{1} to Strength
 \end{itemize}
-\subsubsection{Disgraced Aristocrat}
+\section{Pirate}
+Avast, ye scurvy dog! Never feeling quite at home among all those landlubbers, you made the seven seas your home, constantly on the hunt for poorly defended ships full of loot and plunder! You know the open waters like the palm of your own hand, and it is more than obvious that an encounter with you won't be plasant for any merchant ships. Yarrrr!\newline
+\textbf{Bonuses:}
+\begin{itemize}
+	\item Basic Seamanship feat for free.
+	\item \Bonus{1} to Strength
+	\item \Bonus{1} to Dexterity
+\end{itemize}
+\textbf{Maluses:}
+\begin{itemize}
+	\item \Malus{2} to Intelligence
+	\item You are a wanted criminal. You can't socialize in public without a disguise in a place where law enforcement exists. \textit{(enforcement up to the GM - shouldn't be active in Shanty Towns, only in more respectable neighbours, where the laws are actually enforced)}
+\end{itemize}
+\section{Disgraced Aristocrat}
 Born into a noble family, good with weapons and destined to be noble protector of the realm, you were once the pride of your father - emphasis on was. You did something that upset your family so terribly, that they disowned you, depriving you of your inheritance and much of your wealth, effectively sending you off to walk the earth. Now you travel the lands as a disgruntled mercenary looking for lucrative jobs that might help you become as rich as you once used to be.\newline
 \textbf{Bonuses:}
 \begin{itemize}
@@ -822,7 +882,18 @@ Born into a noble family, good with weapons and destined to be noble protector o
 \begin{itemize}
 	\item dummy
 \end{itemize}
-\subsubsection{Street Urchin}
+\section{Discredited Academic}
+You tried to prove some study that other academicians didn't like, or tried to perform unorthodox experiments that made you get expelled from whatever institute you were working or studying at. Now you walk the earth in hopes that one day, you will find someone who will appreciate your discoveries and theories, either by finding a sponsor to finance your continued studies, or by earning enough money to continue those studies privately.\newline
+\textbf{Bonuses:}
+\begin{itemize}
+	\item \Bonus{2} to Intelligence
+\end{itemize}
+\textbf{Maluses:}
+\begin{itemize}
+	\item \Malus{1} to Charisma
+	\item Particularly religious characters will have a lower opinion of this character. Up to the GM to enforce.
+\end{itemize}
+\section{Street Urchin}
 \textbf{Bonuses:}
 \begin{itemize}
 	\item Dummy
@@ -831,7 +902,7 @@ Born into a noble family, good with weapons and destined to be noble protector o
 \begin{itemize}
 	\item Dummy
 \end{itemize}
-\subsubsection{Runaway Slave}
+\section{Runaway Slave}
 \textbf{Bonuses:}
 \begin{itemize}
 	\item Dummy
@@ -840,7 +911,6 @@ Born into a noble family, good with weapons and destined to be noble protector o
 \begin{itemize}
 	\item Dummy
 \end{itemize}
-\setcounter{subsubsection}{0}
 \chapter{Weapons n' Armour}
 \chapter{Magicks}
 \end{document}
