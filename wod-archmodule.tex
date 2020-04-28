@@ -40,6 +40,8 @@
 \newcommand{\BonusS}[1]{\textcolor{green}{\textbf{+{#1}}}}
 \newcommand{\Malus}[1]{\textcolor{red}{\textbf{-{#1} malus}}}
 \newcommand{\MalusS}[1]{\textcolor{red}{\textbf{-{#1}}}}
+\newcommand{\MalusP}[1]{\textcolor{red}{\textbf{+{#1} malus}}}
+\newcommand{\MalusPS}[1]{\textcolor{red}{\textbf{+{#1}}}}
 \newcommand{\DimorphismBB}[5]{Male {#1} get a \Bonus{{#2}} to {#3}, while Female {#1} get a \Bonus{{#4}} to {#5}.}
 \newcommand{\SoCalled}[1]{\textit{``{#1}''}}
 \newcommand{\Parentheses}[1]{\textit{({#1})}}
@@ -331,7 +333,64 @@ Just like vampires, theriantropes are a special kind of undead that - through th
 \end{tabular}\newline
 \UndeadRace{Theriantropes} Instead, they activate a need for Blood, their own unique vital shared with Vampires.\newpage
 \chapter{Feats}
-\section{Combat Feats}
+\section{Combat Ability Feats}
+\subsection{Flurry}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None, unless your background forbids it.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character cannot use the combat ability \textit{"Quick Attack"}.
+	\item \textbf{Basic:} The character has unlocked the combat ability \textit{"Quick Attack"}. As stated in the basic ruleset, the Quick Attack move allows the character to attack twice in melee during a turn, but at the cost of a \MalusPS{30\%} increase to chance of miss and a \Malus{30\%} to all damage done in melee in case of landing a hit.
+	\item \textbf{Advanced:} The aforementioned maluses are reduced to \MalusPS{15\%} and \MalusS{15\%} respectively.
+	\item \textbf{Expert:} The aforementioned maluses are gone, nullified.
+\end{itemize}\newpage
+\subsection{Overswing}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None, unless your background forbids it.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character cannot use the combat ability \textit{"Power Attack"}.
+	\item \textbf{Basic:} The character has unlocked the combat ability \textit{"Power Attack"}. As stated in the basic ruleset, the Power Attack sacrifices accuracy for strength by getting a \MalusPS{30\%} increase to chance of miss, but also a \Bonus{25\%} to all damage done in melee.
+	\item \textbf{Advanced:} The aforementioned malus is reduced to \MalusPS{20\%}, while the bonus is increased to \BonusS{30\%}.
+	\item \textbf{Expert:} The aforementioned malus is reduced to \MalusPS{10\%}, while the bonus is increased to \BonusS{35\%}.
+\end{itemize}\newpage
+\subsection{Chevauchée}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None, unless your background forbids it.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character cannot use the combat ability \textit{"Mounted Attack"}, and is thus forced to rely on Regular Attacks even while mounted.
+	\item \textbf{Basic:} The character has unlocked the combat ability \textit{"Mounted Attack"}. As stated in the basic ruleset, the Mounted Attack is only possible while the attacker is mounted and is doing the attack move while moving. This kind of attack comes with a \Bonus{40\%} to damage at the cost of an extra \MalusPS{15\%} chance to miss the target
+	\item \textbf{Advanced:} The aforementioned malus is reduced to \MalusPS{10\%}, while the bonus is increased to \BonusS{50\%}.
+	\item \textbf{Expert:} The aforementioned malus is reduced is nullified, while the bonus is increased to \BonusS{60\%}.
+\end{itemize}\newpage
+\subsection{Mounted Archery}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None, unless your background forbids it.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character suffers a \Malus{4} to Dexterity while trying to use Ranged Weapons on horseback, at least when moving.
+	\item \textbf{Basic:} The character suffers a \Malus{2} to Dexterity while trying to use Ranged Weapons on horseback, at least when moving.
+	\item \textbf{Advanced:} The character suffers a \Malus{1} to Dexterity while trying to use Ranged Weapons on horseback, at least when moving.
+	\item \textbf{Expert:} The character suffers no malus to Dexterity while trying to use Ranged Weapons on horseback, at all, shooting just as well as he/she would if stationary.
+\end{itemize}\newpage
+\section{Combat Equipment Proficiency Feats}
 \subsection{Armour Conditioning}
 \begin{table}[!ht]
 \centering
@@ -417,7 +476,7 @@ Just like vampires, theriantropes are a special kind of undead that - through th
 \end{itemize}
 \textbf{Effects:}
 \begin{itemize}
-	\item \textbf{Untrained:} The character always deals minimal damage with bows, no need to roll the dice. They also get a \Malus{2} to Dexterity when it's being counted when using bows. In video game adaptations, this should halve the effective range of all bows.
+	\item \textbf{Untrained:} The character always deals minimal damage with bows, no need to roll the dice. They also get a \Malus{4} to Dexterity when it's being counted when using bows. In video game adaptations, this should halve the effective range of all bows.
 	\item \textbf{Basic:} The character suffers no bonuses or maluses when using bows.
 	\item \textbf{Advanced:} The character reiceves a \Bonus{25\%} to all damage done by bows, and a \Bonus{25\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
 	\item \textbf{Expert:} The character reiceves a \Bonus{50\%} to all damage done by bows, and a \Bonus{50\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
@@ -435,7 +494,7 @@ Just like vampires, theriantropes are a special kind of undead that - through th
 \end{itemize}
 \textbf{Effects:}
 \begin{itemize}
-	\item \textbf{Untrained:} The character needs to skip a turn before using a crossbow to reload every single time they want to shoot. They also get a \Malus{2} to Dexterity when it's being counted when using crossbows. In video game adaptations, this should halve the effective range of all bows.
+	\item \textbf{Untrained:} The character needs to skip a turn before using a crossbow to reload every single time they want to shoot. They also get a \Malus{4} to Dexterity when it's being counted when using crossbows. In video game adaptations, this should halve the effective range of all bows.
 	\item \textbf{Basic:} The character suffers no bonuses or maluses when using crossbows, and can reload fast enough to not to skip a turn doing it.
 	\item \textbf{Advanced:} The character reiceves a \Bonus{25\%} to all damage done by crossbows, and a \Bonus{25\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
 	\item \textbf{Expert:} The character reiceves a \Bonus{50\%} to all damage done by crossbows, and a \Bonus{50\%} to chance to hit or cause critical damage. In video game adaptations, this should also increase range.
@@ -495,7 +554,7 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Advanced:} The character is rather good at martial arts - in other words, when the character does unarmed damage, their actual strength is substituted with 75\% of a combination of their Strength and Dexterity. Additionally, the character gains a \Bonus{20\%} to all unarmed melee damage.
 	\item \textbf{Expert:} The character is a master at martial arts - in other words, when the character does unarmed damage, during the calculation, their actual strength is substituted with a sum of their Strength and Dexterity. Additionally, the character gains a \Bonus{30\%} to all unarmed melee damage.
 \end{itemize}\newpage
-\section{Stealth Feats}
+\section{Logistic Feats}
 \subsection{Sneaking}
 \begin{table}[!ht]
 \centering
@@ -532,6 +591,20 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Advanced:} The character can make forgeries that can fool most people, save for those with a good eye for authentic merchandise.
 	\item \textbf{Expert:} The character can make forgeries that will fool just about everyone, save for true experts.
 \end{itemize}\newpage
+\subsection{Arithmetics}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character can count up to maybe ten, and can literally put two and two together, but not much beyond that.
+	\item \textbf{Basic:} The character is acquited with mathematics well enough to count up to hundreds, add, negate, multiply and divide with relative ease.
+	\item \textbf{Advanced:} The character isn't intimidated by big numbers, can perform just about all mathematical operations that are can be broken down to primitive functions \textit{(addition, negation, multiplication, division, modulo, even possibly integer exponentiaton)}, albeit possibly rather slowly. With the aid of a lookup table, even trigonometry is possible. Nevertheless, complex equations still confuse the character. The character is also good with boolean algebra.
+	\item \textbf{Expert:} The character can not only perform calculations by hand at a reasonable speed, but is also good at comprehending more complex equations - albeit, trigonometry is still going to be slow and difficult without the aid of a lookup table. The character might also know about some of the more obscure sides of mathematics, such as complex numbers and differential algebra \textit{(derivation and integration)}.
+\end{itemize}\newpage
 \subsection{Seamanship}
 \begin{table}[!ht]
 \centering
@@ -545,10 +618,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 \end{itemize}
 \textbf{Effects:}
 \begin{itemize}
-	\item \textbf{Untrained:} You almost instantly get seasick the moment your ship disembarks.
-	\item \textbf{Basic:} Dummy
-	\item \textbf{Advanced:} Dummy
-	\item \textbf{Expert:} Dummy
+	\item \textbf{Untrained:} The character has no idea how to operate a ship, and lacks all the skill needed to be a competent sailor, let alone a captain.
+	\item \textbf{Basic:} The character knows the basics of how to handle oneself on a ship, knows the enough of a typical ship's anatomy to know what's up when things happen, and knows something about rudementary navigation without a compass - they'll still likely to get lost in the open sea if misfortune falls upon the crew and fate puts the character in charge of a ship. The character makes an okay sailor, but probably a terrible captain. \textit{(Up to the GM to enforce)}
+	\item \textbf{Advanced:} The character knows how to operate most vessels, knows a thing or two about meteorology and weather forecasting, and in case a crisis puts them in charge of a ship, they also know about watchkeeping \textit{(the assignment of sailors to specific roles on a ship to operate it continuously)}. As a sailor, the character knows what he/she is doing, but as a captain - average at best. \textit{(Up to the GM to enforce)}
+	\item \textbf{Expert:} The character not only knows the open sea like the palm of their own hands, but can intuit their direction, the distance of nearest land, the time of the next storm, and various other things that come handy when sailing. The character knows just about everything that can be known about operating and commanding a single vessel, though not necessarily a whole fleet. Thus, the character makes a fine captain, but not necessarily an admiral - that depends more on their general leadership skills. \textit{(Up to the GM to enforce)}
 \end{itemize}\newpage
 \subsection{Tracking}
 \begin{table}[!ht]
@@ -629,6 +702,8 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Untrained:} The character cannot use Nature Magic.
 	\item \textbf{Trained:} The character can use Nature Magic, and can learn spells and other magic-related feats. The character also gains the Basic Spells \textit{(Telekinessis, Lighting, Energy Bolt)}.
 \end{itemize}\newpage
+\subsection{Alchemy}
+\subsection{Enchantment}
 \subsection{Photomancy}
 \begin{table}[!ht]
 \centering
@@ -810,11 +885,7 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Advanced:} The character can fit into more caddish company and can talk to slang-slinging criminals without having a serious disadvantage at persuasion. No Charisma malus.
 	\item \textbf{Expert:} The character feels right at home in the underground, and can have his/her way with the tongue of those street urchins - so much so that, the character gains an advantage at persuading them - effects up to DM discression, or a \Bonus{2} to Charisma when talking to underground-class people.
 \end{itemize}\newpage
-\subsection{Smuggling}
-\begin{table}[!ht]
-\centering
-\FeatIII{Basic}{Advanced}{Expert}{Smuggling}{{\import{images/Feats/}{images/Feats/Smuggling1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Smuggling2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Smuggling3.pdf_tex}}}
-\end{table}
+\subsection{Diaesthese}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Basic:} None, unless your background forbids it.
@@ -823,11 +894,129 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 \end{itemize}
 \textbf{Effects:}
 \begin{itemize}
+	\item \textbf{Untrained:} Unless the character knows Etiquette or Street Smarts, the character lacks people-skills altogether, and also lacks the intuition necessary to depect lies, emotional manipulation, thus lacks the ability to deflect persuasion attempts, unless the other person is trying to convince them to do something they absolutely do not want to do. \textit{(Enforcement largely up to GM - unsure how to implement in CRPG adaptation)}
+	\item \textbf{Basic:} The character has some awareness, intuition and people-skills that allow them to detect lies to a degree and intuit other people's motivations \textit{(both to detect persuasion attempts from them and also to better persuade them as well)}. Basically, the character knows human nature enough to have some people-skills. \textit{(Enforcement largely up to GM - unsure how to implement in CRPG adaptation)}
+	\item \textbf{Advanced:} The character can read emotions and intuit other people's motivations well enough to suspect that something's not right when other people lie to them or attempt to persuade them. They also know enough about human nature to meaningfully persuade and manipulate others. \textit{(Enforcement largely up to GM - unsure how to implement in CRPG adaptation)}
+	\item \textbf{Expert:} The character can detect lies from all but the most masterful liars, and can profile people rather easily. The character has the necessary skill to easily build rapport and manipulate others, as well as deflect manipulation attempts from all but the most skilled manipulators. \textit{(Enforcement largely up to GM - unsure how to implement in CRPG adaptation)}
+\end{itemize}\newpage
+\subsection{Smuggling}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Smuggling}{{\import{images/Feats/}{images/Feats/Smuggling1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Smuggling2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Smuggling3.pdf_tex}}}
+\end{table}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} The character must already have Basic Diaesthese.
+	\item \textbf{Advanced:} None, so long as the character has this skill in Basic.
+	\item \textbf{Expert:} None, so long as the character has this skill in Advanced.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
 	\item \textbf{Untrained:} The character is immediately caught carrying illegal goods by guards, if they have anything to hide.
 	\item \textbf{Basic:} The character can fool less intelligent and less vigilant guards and convince them to let him/her pass through.
 	\item \textbf{Advanced:} The character can hide illegal merchandise well enough to avoid arousing suspicion, as well as convincing the authorities to look the other ways.
 	\item \textbf{Expert:} The character can practically smuggle high explosives into the royal palace without anyone so much as raising an eyebrow.
 \end{itemize}\newpage
+\subsection{Literacy}
+The literacy skill is special in that it is not a single feat, but rather a group of feats that covers a character's fluency with a specific writing system.\newline
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} None.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character is illiterate and cannot read and write - at least not with the writing system in question.
+	\item \textbf{Basic:} In case of an alphabet, abjad, abugida or syllabary, the character more or less knows which letters map to which sounds and phonemes, albeit makes constant reading and spelling errors if the script isn't particularly phonemic, with historical and etymological spelling just straight-up confusing the character. In case of a logographic script, the character may know perhaps less than a hundred characters. Either way, the character both reads and writes slowly, and might not even be able to read at all without having to sound out the written words out loud.
+	\item \textbf{Advanced:} In case of an alphabet, abjad, abugida or syllabary, character has memorized enough rules and words to know about the perils of etymological and historical spelling, thus knows how to spell most commonly used words correctly, though they may still struggle with some fancy names - or in case of a logographic system, the character knows at least five hundred characters. Either way, if the character didn't already possess the ability of silent reading, now they are guaranteed to do.
+	\item \textbf{Expert:} The character can both read and write perfectly fluently. If the writing system is an alphabet, then the character knows how to spell the vast majority of words in their language correctly, and isn't confused by historical or etymological spellings - if the writing system is logographic, the character knows 3000-5000 symbols.
+\end{itemize}\newpage
+\subsection{Foreign Language}
+The language skill is special in that it is not a single feat, but rather a group of feats that covers a character's fluency in a language.\newline
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} The language in question not being the character's native tongue.
+	\item \textbf{Advanced:} None.
+	\item \textbf{Expert:} None.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character cannot speak that language, and cannot understand anything from it, unless their own native language is closely related to \textit{(and preferably mutually intelligible with)} the language in question.
+	\item \textbf{Basic:} The character has some level of fluency at the language in question, but makes a lot of errors in grammar and pronounciation alike, has a very noticeable accent and a limited vocabulary. Overall, the character knows enough to get them in and out of trouble, but not much else.
+	\item \textbf{Advanced:} The character is fluent at the language. While still having an accent, and the occasional grammatical hiccup, they can both understand and speak the language confidently.
+	\item \textbf{Expert:} The character is as fluent at the language as a native speaker - if not more. They not only speak it with perfect grammar and pronounciation, but can also utilize it to a degree that would make even some poets green with envy. Unless the character has intentionally made it their trademark, the character no longer has an accent.
+\end{itemize}\newpage
+\subsection{Classical Language}
+The classical language skill is special in that it is not a single feat, but rather a group of feats that covers a character's fluency in a dead language.\newline
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} Basic Literacy at the language's script.
+	\item \textbf{Advanced:} Advanced Literacy at the language's script.
+	\item \textbf{Expert:} Expert Literacy at the language's script.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character knows next to nothing about the classical language in question, except maybe a few loanwords their native tongue has borrowed from it.
+	\item \textbf{Basic:} The character knows a lot of words, but cannot really speak the language or write in it, only sort of understand written text via slow and sluggish reading, not even understanding all the words, just figuring out what the sentence as a whole means.
+	\item \textbf{Advanced:} The character knows how to read the language, and also knows how to write in it, albeit with many errors, and an unorthodox syntax that would be foreign to the now-extinct native speakers of the tongue. They can also speak the language, albeit only slowly, mostly using simple when words forced to improvise - nevertheless, it will get the point accross to anyone who shares their level of fluency at the ancient tongue.
+	\item \textbf{Expert:} The character can read and write the ancient tongue fluently without any errors, and can speak it understanibly, albeit with a strong accent coloured by their native tongue - understandable, as the language in question has no native speakers left, and no one is exactly sure how to pronounce things in it anymore \textit{(for example, think of someone using Italian or Spanish pronounciation when reading Classical Latin - in other words, Eccelestial Latin in a nutshell - or Modern Greek pronounciation when reading Ancient Greek text, Classical Japanese with modern pronounciation, etc.)}.
+\end{itemize}\newpage
+\subsection{Music}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} Intact hands \textit{(for an instrument)} or the character not being a mute \textit{(for vocals)}
+	\item \textbf{Advanced:} None, if Basic Music is already possed.
+	\item \textbf{Expert:} None, if Advanced Music is already possed.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character knows nothing about making music - they may not be tonedeaf, they may appreciate good music, but they are utterly clueless when it comes to making music. They can't play any instruments, sing out of tune, etc.
+	\item \textbf{Basic:} The character can make acceptable quality music, and can play back existing songs with only a few mistakes. If formally trained in music, they know a lot about musical theory and can read sheet music - if not, then they can still intuit musical theory and memorize songs. Learning a new instrument is a hard thing to do.
+	\item \textbf{Advanced:} The character's musical skills are what can be expected from a typical bard - at least, one that's financially secure and isn't in the risk of running out of business.
+	\item \textbf{Expert:} The character can compose fine songs, and can be considered a virtuoso on their instrument of choice - they also learn new instruments relatively easily. If the character has opted for vocals instead or, or in addition to instruments, they also know quite a few vocal techniques, being able to squeeze out as much as possible from their vocal chords.
+\end{itemize}\newpage
+\subsection{Amorous Culture}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} The character can't be a virgin. \textit{(Backstory requirement)}
+	\item \textbf{Advanced:} None, if Basic Amorous Culture is already possed.
+	\item \textbf{Expert:} None, if Advanced Amorous Culture is already possed.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} When making love, the character is driven purely by their instincts - whether that is a good thing or a bad thing is subjective. One's taste might coincidentally correspond to what the character has instinctively produced, but others may want something more refined: whether that means softer and more considerate, or rougher and more aggressive, varies from partner to partner. Additionally, the character likely doesn't know much about protection, STDs, etc.
+	\item \textbf{Basic:} The character knows how to intuit their partner's desires, and can more or less attempt to fufill them - to what degree of success, remains questioanble.
+	\item \textbf{Advanced:} The character knows the art of lovemaking, and knows how to please any partner whose desire is a technique of sorts, rather than a passive attribute of their partner. The character leaves most partners satisfied.
+	\item \textbf{Expert:} The character has mastered the art of lovemaking to the point of effectively making their partners crazy from ecstasy during the act, constantly leaving them yearning for even more.
+\end{itemize}\newpage
+\subsection{Logic}
+\textbf{Requirements:}
+\begin{itemize}
+	\item \textbf{Basic:} An intelligence of 10.
+	\item \textbf{Advanced:} An intelligence of 12.
+	\item \textbf{Expert:} An intelligence of 14.
+\end{itemize}
+\textbf{Effects:}
+\begin{itemize}
+	\item \textbf{Untrained:} The character hasn't been formally schooled in Logic - which doesn't necessarily mean that they are devoid of logic or incapable of logical reasoning, potentially, it's quite the contrary: being able to put two and two together and discover the relationships between things is just being intelligent. \textit{"Logic"} in this context refers to more abstract fields of study and philosophy, something formally studied, beyond regular intuition.
+	\item \textbf{Basic:} The character has received some formal schooling in Logic. Besides being skilled at logical reasoning - whether deductive, inductive or abductive, up to their preference - they also have knowledge about syllogistic logic, as well as Boolean logic.
+	\item \textbf{Advanced:} The character possesses a comprehensive understanding of classical logic and philosophy, and thus can use this knowledge in philosophical debates, as well as when answering complex questions.
+	\item \textbf{Expert:} The character is a philosopher in the making.
+\end{itemize}\newpage
+\section{Mundane Professions}
+\subsection{Smithing}
+\subsection{Weaponsmithing}
+\subsection{Armoursmithing}
+\subsection{Wheelcrafting}
+\subsection{Woodworking}
+\subsection{Carpentry}
+\subsection{Shoemaking}
+\subsection{Needlework}
+\subsection{Herbalism}
+\subsection{Farming}
+\subsection{Hunting}
+\subsection{Cooking}
 \chapter{Backgrounds}
 \section{Silver Spoon}
 You were born into and raised as a member of a family belonging to the upper echelons of society. This means you have connections, you know people of importance, and you are known by people of importance. All well and good, but your pampered and sheltered childhood has spoiled you, reducing your ability to learn.\newline
@@ -850,14 +1039,15 @@ Ever since an early stage of your life, you have discovered a unique talent of y
 \textbf{Bonuses:}
 \begin{itemize}
 	\item \Bonus{2} to Charisma
+	\item You start with the Advanced Diaesthese feat
 	\item You start with the Basic Etiquette feat
 	\item You start with the Basic Street Smarts feat
-	\item You choose between receiving Advanced Etiquette or Advanced Street Smarts for free
 \end{itemize}
 \textbf{Maluses:}
 \begin{itemize}
 	\item You can only choose 3 feats at the beginning, instead of the usual 6.
 	\item \Malus{1} to Strength
+	\item \Malus{1} to Endurance
 \end{itemize}
 \section{Pirate}
 Avast, ye scurvy dog! Never feeling quite at home among all those landlubbers, you made the seven seas your home, constantly on the hunt for poorly defended ships full of loot and plunder! You know the open waters like the palm of your own hand, and it is more than obvious that an encounter with you won't be plasant for any merchant ships. Yarrrr!\newline
@@ -871,6 +1061,17 @@ Avast, ye scurvy dog! Never feeling quite at home among all those landlubbers, y
 \begin{itemize}
 	\item \Malus{2} to Intelligence
 	\item You are a wanted criminal. You can't socialize in public without a disguise in a place where law enforcement exists. \textit{(enforcement up to the GM - shouldn't be active in Shanty Towns, only in more respectable neighbours, where the laws are actually enforced)}
+\end{itemize}
+\section{Amnesiac Diviner of the Sea}
+Some say that every great man's story begins at their birth. Others prefer starting the story at an important event that set them on the path they would go on. If we were to go with the latter school of thought, we'd say that your story truly begins during a sea battle. You were essentially a sailor with Cassandra's curse - blessed with the ability to see the future, cursed with the fate of not being believed by anyone. \textit{"It's a trap!"} you said, but the captain didn't listen to you. Your ship was ambushed, your ship was captured, your crew was massacred, and you were thrown into the sea to feed the sharks - yet, somhehow, you lived, washed ashore a nameless island. Whether it was because you hit your head extra hard some time along the line, or because of traumatic experience, you now have amnesia, barely remember anything about the past before the battle. How tragic to be able to tell others' future, but not your own past, isn't it?\newline
+\textbf{Bonuses:}
+\begin{itemize}
+	\item Basic Seamanship for free
+	\item Your character has premotions of sorts, and can tell if something is wrong in an \textit{"I have a bad feeling about this"} way. The GM has to take this into account, albeit not to the point of metagaming.
+\end{itemize}
+\textbf{Maluses:}
+\begin{itemize}
+	\item You can only choose 5 feats at the beginning, instead of the usual 6.
 \end{itemize}
 \section{Disgraced Aristocrat}
 Born into a noble family, good with weapons and destined to be noble protector of the realm, you were once the pride of your father - emphasis on was. You did something that upset your family so terribly, that they disowned you, depriving you of your inheritance and much of your wealth, effectively sending you off to walk the earth. Now you travel the lands as a disgruntled mercenary looking for lucrative jobs that might help you become as rich as you once used to be.\newline
