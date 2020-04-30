@@ -55,6 +55,12 @@
 {#1} \\ \hline
 {\resizebox{.2\linewidth}{!}{{#2}}} \\ \hline
 \end{tabular}}
+\newcommand{\FeatII}[5]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} c}
+\hline
+\multicolumn{2}{|c|}{{#3}} \\ \hline
+\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#4}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#5}}} \\ \hline
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
+\end{tabularx}}
 \newcommand{\FeatIII}[7]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
 \hline
 \multicolumn{3}{|c|}{{#4}} \\ \hline
@@ -635,6 +641,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Expert:} The character can easily swim like a dolphin for hours, taking their equipment with them. However, they are still incapable of swimming in metal armour.
 \end{itemize}\newpage
 \subsection{Riding}
+\begin{table}[!ht]
+\centering
+\FeatI{Basic Riding}{{\import{images/Feats/}{images/Feats/Riding.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Basic:} None, unless your background forbids it.
@@ -643,8 +653,12 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 \begin{itemize}
 	\item \textbf{Untrained:} The character has probably never ridden a mount before, and even if they did, they quickly forget all the lessons learned. They don't really understand how to communicate with their mount. When they say "Yah!" to the animal, it won't move one inch. 
 	\item \textbf{Basic:} A character with basic riding skills has a broad understanding of how to mount most mounts and get them to move in the direction the character wants. Some animals are harder to control than others, but as long as the animal in question is already tame to begin with, the character should have no problems mounting it and riding it after some familiarization - of course, mounted combat is a different matter altogether, and a different skill.
-\end{itemize}
+\end{itemize}\newpage
 \subsection{Horsemanship}
+\begin{table}[!ht]
+\centering
+\FeatII{Basic}{Advanced}{Horsemanship}{{\import{images/Feats/}{images/Feats/Horsemanship1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Horsemanship2.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Advanced:} The character must possess Basic Riding.
@@ -657,6 +671,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Expert:} The character controls their horse instinctively, forming a bond with their mount rather quickly.
 \end{itemize}
 \subsection{Cameleering}
+\begin{table}[!ht]
+\centering
+\FeatII{Basic}{Advanced}{Cameleering}{{\import{images/Feats/}{images/Feats/Camel1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Camel2.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Advanced:} The character must possess Basic Riding.
@@ -667,8 +685,12 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Untrained:} Assuming the character already has Basic Riding, they can ride camels and other camel-like animals, but aren't specialized at riding them, and can ride them just about as well as they can ride any other tame animals large and strong enough to bear with their weight. Otherwise, refer to the description of Untrained Riding.
 	\item \textbf{Advanced:} The character has grown specialized in riding camels and other camel-like creatures, thus knows more about them than the average rider, is qualified to compete in races. They also familiar themselves with their camel much faster.
 	\item \textbf{Expert:} The character controls their camel instinctively, forming a bond with their mount rather quickly.
-\end{itemize}
+\end{itemize}\newpage
 \subsection{Raptoring}
+\begin{table}[!ht]
+\centering
+\FeatII{Basic}{Advanced}{Raptoring}{{\import{images/Feats/}{images/Feats/Raptor1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Raptor2.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Advanced:} The character must possess Basic Riding.
@@ -679,7 +701,7 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Untrained:} Even the character already knows the Basics of Riding, they still can't control - or at the very least, struggle heavily with - controlling a mount that also happens to be a carnivore, such as basilisks.
 	\item \textbf{Advanced:} The character can control a carnivorous mount somewhat effectively.
 	\item \textbf{Expert:} The character controls their carnivorous mount instinctively, forming a bond with their mount rather quickly.
-\end{itemize}
+\end{itemize}\newpage
 \subsection{Forgery}
 \begin{table}[!ht]
 \centering
@@ -699,6 +721,10 @@ Exotic weapons are weapons that don't fit into any of the aforementioned categor
 	\item \textbf{Expert:} The character can make forgeries that will fool just about everyone, save for true experts.
 \end{itemize}\newpage
 \subsection{Arithmetics}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Arithmetics}{{\import{images/Feats/}{images/Feats/Arithmetic1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Arithmetic2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Arithmetic3.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Basic:} None.
@@ -1070,6 +1096,10 @@ The classical language skill is special in that it is not a single feat, but rat
 	\item \textbf{Expert:} The character can read and write the ancient tongue fluently without any errors, and can speak it understanibly, albeit with a strong accent coloured by their native tongue - understandable, as the language in question has no native speakers left, and no one is exactly sure how to pronounce things in it anymore \textit{(for example, think of someone using Italian or Spanish pronounciation when reading Classical Latin - in other words, Eccelestial Latin in a nutshell - or Modern Greek pronounciation when reading Ancient Greek text, Classical Japanese with modern pronounciation, etc.)}.
 \end{itemize}\newpage
 \subsection{Music}
+\begin{table}[!ht]
+\centering
+\FeatIII{Basic}{Advanced}{Expert}{Music}{{\import{images/Feats/}{images/Feats/Music1.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Music2.pdf_tex}}}{{\import{images/Feats/}{images/Feats/Music3.pdf_tex}}}
+\end{table}
 \textbf{Requirements:}
 \begin{itemize}
 	\item \textbf{Basic:} Intact hands \textit{(for an instrument)} or the character not being a mute \textit{(for vocals)}
