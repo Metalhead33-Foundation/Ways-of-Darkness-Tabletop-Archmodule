@@ -23,9 +23,9 @@ all: wod-archmodule.pdf
 	@echo "Generate deps for $<"
 	@${TEX_DEPS} $< > $@
 
-%/index.tex: $(wildcard %/prefix.txt) Makefile
-	cat $< > $@
-	find "$(subst index.tex,,$@)" -type d -o \( -iname '*.tex' ! -iname 'index.tex' \) -printf '\input{%p}\n' | sed 's|/$$|/index.tex|' >> $@
+#%/index.tex: $(wildcard %/prefix.txt) Makefile
+#	cat $< > $@
+#	find "$(subst index.tex,,$@)" -type d -o \( -iname '*.tex' ! -iname 'index.tex' \) -printf '\input{%p}\n' | sed 's|/$$|/index.tex|' >> $@
 
 wod-archmodule.pdf: wod-archmodule.tex wod-archmodule.tex.part
 	lualatex --shell-escape $< < /dev/null
