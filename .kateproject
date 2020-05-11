@@ -1,6 +1,6 @@
 {
     "name": "WOD ArchModule",
-    "files": [ { "git": 1 } ],
+    "files": [ { "directory": ".", "filters": ["*.tex"], "recursive": 1} ],
     "build": {
         "build": "make all",
         "clean": "make clean"
