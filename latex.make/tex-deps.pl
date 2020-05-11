@@ -16,7 +16,7 @@ while ( @ARGV > 0 ) {
 
     open my $FH, '<', $texfile;
 
-    $depsTxt = $depsTxt."$texfile.part: $texfile";
+    $depsTxt = $depsTxt.escape_space($texfile).".part: ".escape_space($texfile);
 
     my @exts = ("jpg", "jpeg","png");
     

@@ -31,6 +31,7 @@ endif
 %.tex.d: %.tex ${TEX_DEPS}
 	@echo "Generate deps for $<"
 	@${TEX_DEPS} "$@" "$<"
+	cat $@
 
 %/index.tex: .FORCE
 	@echo "Generating index $@"
