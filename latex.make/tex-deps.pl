@@ -16,7 +16,7 @@ while ( @ARGV > 0 ) {
 
     open my $FH, '<', $texfile;
 
-    $depsTxt = $depsTxt."$texfile.part: $texfile";
+    $depsTxt = $depsTxt.escape_space($texfile).".part: ".escape_space($texfile);
 
     my @exts = ("jpg", "jpeg","png");
     
@@ -27,7 +27,7 @@ while ( @ARGV > 0 ) {
             $depsTxt = "$depsTxt $inclusion";
             
         }
-        if(my @matches = m/\import\{[^}]+}{([^}]+)\}/g) {
+        if(my @matches = m/\import\{[^}]+\}\{([^}]+)\}/g) {
             @matches = map { escape_space $_ } @matches;
             $depsTxt = $depsTxt." ".join(" ",@matches);
         }
