@@ -39,14 +39,14 @@ endif
 	  find "./$(subst index.tex,,$@)" -mindepth 1 -maxdepth 1 -iname '*.tex' -type f ! -iname 'index.tex' -printf '\\input{%p}\n' ;\
 	} | sed 's|\./||g' | sort > "$@.new"
 	cmp -s "$@" "$@.new" || mv -f "$@.new" "$@"
-	rm "$@.new"
+	rm -f "$@.new"
 # 	@find * -name '*.tex' -print0 | xargs -0 $(TEX_DEPS) Makefile.deps
 # 	@${MAKE} Makefile.deps
 
 # || ( cat $(subst pdf,log,$@) && false )
 
 %.pdf: %.tex.part
-	lualatex --shell-escape $(subst .part,,$<) < /dev/null > /dev/null
+	lualatex --shell-escape $(subst .part,,$<) < /dev/null
 	lualatex --shell-escape $(subst .part,,$<) < /dev/null
 
 .PHONY: .FORCE

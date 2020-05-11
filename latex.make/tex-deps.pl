@@ -5,6 +5,12 @@ use strict;
 my $output = shift @ARGV;
 my $depsTxt = "";
 
+sub escape_space {
+    $_ = shift;
+    s/ /\\ /g;
+    return $_;
+}
+
 while ( @ARGV > 0 ) {
     my $texfile = shift @ARGV;
 
@@ -15,17 +21,17 @@ while ( @ARGV > 0 ) {
     my @exts = ("jpg", "jpeg","png");
     
     while (<$FH>) {
-        if(/\input{([^}]+)}/) {
+        if(/\input\{([^}]+)\}/) {
             my $inclusion = "${1}.part";
             $inclusion =~ s/ /\\ /g;
             $depsTxt = "$depsTxt $inclusion";
             
         }
-        if(my @matches = m/\import{[^}]+}{([^}]+)}/g) {
-            @matches = map { $_ =~ s/ /\\ /g } @matches;
+        if(my @matches = m/\import\{[^}]+}{([^}]+)\}/g) {
+            @matches = map { escape_space $_ } @matches;
             $depsTxt = $depsTxt." ".join(" ",@matches);
         }
-        if(/\includegraphics{([^}]+)}/) {
+        if(/\includegraphics\{([^}]+)\}/) {
             my $found = 0;
             foreach my $ext ( @exts ) {
                 my $graphic = "images/$1.$ext";
