@@ -27,7 +27,7 @@ while ( @ARGV > 0 ) {
             $depsTxt = "$depsTxt $inclusion";
             
         }
-        if(my @matches = m/\import\{[^}]+}{([^}]+)\}/g) {
+        if(my @matches = m/\import\{[^}]+\}\{([^}]+)\}/g) {
             @matches = map { escape_space $_ } @matches;
             $depsTxt = $depsTxt." ".join(" ",@matches);
         }
