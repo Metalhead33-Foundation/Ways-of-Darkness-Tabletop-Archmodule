@@ -13,6 +13,7 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{enumitem}
+\usepackage{tcolorbox}
 \usepackage{newtxtext,newtxmath}
 \usepackage{makecell}
 \usepackage{import}
@@ -61,6 +62,9 @@
 \multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#4}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#5}}} \\ \hline
 \multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
 \end{tabularx}}
+\newcommand{\MoreInfo}[1]{\begin{tcolorbox}[title=Notice]
+More \textit{(up-to-date)} information at: \url{https://ways-of-darkness.sonck.nl/#1}
+\end{tcolorbox}}
 \newcommand{\FeatIII}[7]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
 \hline
 \multicolumn{3}{|c|}{{#4}} \\ \hline
@@ -70,18 +74,5 @@
 
 \maketitle
 \tableofcontents
-\chapter*{Preface}
-You are currently reading the documentation of the \textbf{Ways of Darkness module for} the \textbf{World of Artograch RPG system}. The author of this document presents you all the information within this document with the assumption that you have read the \textbf{World of Artograch Ruleset}, and thus are familiar with the rules it presented. Contents of the aforementioned document are expected to be referenced in this document.
-\addcontentsline{toc}{chapter}{Preface}
-\chapter{Introduction to the Occident}
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Occident_Borders}
-\newpage
-The \textbf{Occident} is the part of \textbf{Artograch} with perhaps the most dynamic history. While even the Occident shows a similar tendency as the Orient to have large countries dominated by a single race, it is slightly more nuanced in the Occident, which has had a history of territories changing hands. While the Orient has always been characterized by the rule of centralized and homogenous kingdoms, and highly bureaucratic and usually equally homogenous, often quasi-despotic empires, the Occident has always been a place where central authorities held only limited amount of power, with provinces enjoying high autonomy.\newline
-The various races of the Occident are divided into two major groups: the Elven races \textit{(Humans, High Elves, Wood Elves, Dark Elves, Orcs)} being descended from Oriental invaders; and the indigenous races \textit{(Goblins, Ogres, Lizardmen, Halflings, Gnomes and Dwarves)} whose population was decimated by the arrival of the earlier. Out of the two, the earlier are clearly the dominant force on the continent, with three out of the four dominant powers in the Occident being dominated by an Elven race - Etrand by Humans, Froturn by High Elves, Dragoc by Wood Elves.\newline
-Currently, as of 831 AEKE \textit{(831 years after the establishment of the Kingdom of Etrand)}, the Occident is at a tipping point: the three aforementioned great powers are at a three-way cold war with each other, with tensions being at an all-time high, while the previously unmentioned fourth, Gabyr, is sitting in the shadows watching it all with popcorn in their hands, while slowly expanding their trade empire in the Orient. Unseen for roughly five and a half centuries, Demons have been sighted lurking around, no doubt planting their own secret agents among the authorities of the aforementioned states. It is said that even the Orcs of Brutang are getting quite unruly, while the Empire of Neressa continues its long-practiced isolationist policies and the Principality of Artaburro tries to wiggle between the Kingdoms of Froturn, Dragoc and Etrand.
-\input{races.tex}
-\input{feats.tex}
-\input{backgrounds.tex}
-\chapter{Weapons n' Armour}
-\chapter{Magicks}
+\input{chapters.d.tex/index.tex}
 \end{document}
