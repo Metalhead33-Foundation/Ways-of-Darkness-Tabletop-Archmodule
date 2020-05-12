@@ -1,0 +1,3 @@
+[submodule "latex.make"]
+	path = latex.make
+	url = ../../mp/latex.make.git
