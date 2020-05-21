@@ -17,6 +17,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage{makecell}
 \usepackage{import}
+\usepackage{adjustbox}
 \usepackage[square,sort,comma,numbers]{natbib}
 \usepackage[a4paper, margin=1.5cm]{geometry}
 %\setcounter{tocdepth}{2}
@@ -38,6 +39,7 @@
 }
 
 \begin{document}
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
 \newcommand{\BipedalTwoArms}[3]{Being bipedal {#1}, {#3} have two hands and two legs, meaning that they can wield only two one-handed weapons \textit{(or a one-handed weapon and a shield)} or a single two-handed weapon at the same time. Just like with other bipedal {#2} races, reaching zero hitpoints on the arms or legs renders those limbs unusable \textit{(and disables the corresponding item slots)}, while reaching zero hitpoints at the torso or head means death - or unconsciousness, if house rules rule out death.}
 \newcommand{\MammalRace}[1]{\BipedalTwoArms{mammals without tails}{mammalian}{{#1}} As mammals, {#1} cannot breathe under water without magic or specifial \textit{(read: modern, therefore nonexistent in this setting)} equipment, with prolonged presence underweater leading to drowning.}
 \newcommand{\LizardRace}[1]{\BipedalTwoArms{reptoids with tails}{reptilian}{{#1}} Their tails are not a vital body part - their loss may be very painful \textit{(and cause potentially lethal bleeding, if the wound is not treated fast enough)}, the body part itself isn't vital, making its loss non-lethal. As we're talking about reptiles rather than mammmals, this species breeds by eggs rather than giving live birth; has a critical weakness towards extreme temperatures and cannot be turned into a secondary race specific to mammals. Reptiles are different from amphibians - they are \textbf{not} able to breathe underwater, and thus drown just like mammals. They cannot be infected with Vampirism or Theriantropy, because those are mammal-specific diseases.}
@@ -51,16 +53,35 @@
 \newcommand{\DimorphismBB}[5]{Male {#1} get a \Bonus{{#2}} to {#3}, while Female {#1} get a \Bonus{{#4}} to {#5}.}
 \newcommand{\SoCalled}[1]{\textit{``{#1}''}}
 \newcommand{\Parentheses}[1]{\textit{({#1})}}
-\newcommand{\FeatIRow}[2]{{#1} \\ \hline
+\newcommand{\FeatIIHeader}[2]{
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
+}
+\newcommand{\FeatIIContent}[2]{
+\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#1}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#2}}} \\ \hline
+}
+\newcommand{\FeatIIIHeader}[3]{
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline
+}
+\newcommand{\FeatIIIContent}[3]{
+\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#1}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#2}}} & \multicolumn{1}{c|}{\resizebox{.2\linewidth}{!}{{#3}}} \\ \hline
+}
+\newcommand{\FeatIVHeader}[4]{
+\multicolumn{1}{|c|}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c}{{#3}}       & \multicolumn{1}{c|}{{#4}}       \\ \hline
+}
+\newcommand{\FeatIVContent}[4]{
+\multirow{1}{*}{#1} & \multicolumn{1}{c}{\resizebox{.1\linewidth}{!}{{#2}}} & \multicolumn{1}{c}{\resizebox{.1\linewidth}{!}{{#3}}} & \multicolumn{1}{c|}{\resizebox{.1\linewidth}{!}{{#4}}} \\ \hline
+}
+\newcommand{\FeatIRow}[2]{
+{#1} \\ \hline
 {\resizebox{.2\linewidth}{!}{{#2}}} \\ \hline
 }
 \newcommand{\FeatIIRow}[4]{
-\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#3}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#4}}} \\ \hline
-\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
+\FeatIIContent{{#3}}{{#4}}
+\FeatIIHeader{{#1}}{{#2}}
 }
 \newcommand{\FeatIIIRow}[6]{
-\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#4}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#5}}} & \multicolumn{1}{c|}{\resizebox{.2\linewidth}{!}{{#6}}} \\ \hline
-\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline
+\FeatIIIContent{{#4}}{{#5}}{{#6}}
+\FeatIIIHeader{{#1}}{{#2}}{{#3}}
 }
 \newcommand{\FeatI}[2]{\begin{tabular}{|c|}
 \FeatIRow{{#1}}{{#2}}
