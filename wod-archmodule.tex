@@ -51,16 +51,24 @@
 \newcommand{\DimorphismBB}[5]{Male {#1} get a \Bonus{{#2}} to {#3}, while Female {#1} get a \Bonus{{#4}} to {#5}.}
 \newcommand{\SoCalled}[1]{\textit{``{#1}''}}
 \newcommand{\Parentheses}[1]{\textit{({#1})}}
-\newcommand{\FeatI}[2]{\begin{tabular}{|c|}
-\hline
-{#1} \\ \hline
+\newcommand{\FeatIRow}[2]{{#1} \\ \hline
 {\resizebox{.2\linewidth}{!}{{#2}}} \\ \hline
+}
+\newcommand{\FeatIIRow}[4]{
+\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#3}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#4}}} \\ \hline
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
+}
+\newcommand{\FeatIIIRow}[6]{
+\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#4}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#5}}} & \multicolumn{1}{c|}{\resizebox{.2\linewidth}{!}{{#6}}} \\ \hline
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline
+}
+\newcommand{\FeatI}[2]{\begin{tabular}{|c|}
+\FeatIRow{{#1}}{{#2}}
 \end{tabular}}
 \newcommand{\FeatII}[5]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} c}
 \hline
 \multicolumn{2}{|c|}{{#3}} \\ \hline
-\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#4}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#5}}} \\ \hline
-\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
+\FeatIIRow{{#1}}{{#2}}{{#4}}{{#5}}
 \end{tabularx}}
 \newcommand{\MoreInfo}[1]{\begin{tcolorbox}[title=Notice]
 More \textit{(up-to-date)} information at: \url{https://ways-of-darkness.sonck.nl/#1}
@@ -68,8 +76,7 @@ More \textit{(up-to-date)} information at: \url{https://ways-of-darkness.sonck.n
 \newcommand{\FeatIII}[7]{\begin{tabularx}{0.75\textwidth}{c @{\extracolsep{\fill}} cc}
 \hline
 \multicolumn{3}{|c|}{{#4}} \\ \hline
-\multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#5}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#6}}} & \multicolumn{1}{c|}{\resizebox{.2\linewidth}{!}{{#7}}} \\ \hline
-\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline
+\FeatIIIRow{{#1}}{{#2}}{{#3}}{{#5}}{{#6}}{{#7}}
 \end{tabularx}}
 
 \maketitle
