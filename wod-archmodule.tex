@@ -15,7 +15,7 @@
 \usepackage{enumitem}
 \usepackage{tcolorbox}
 \usepackage{newtxtext,newtxmath}
-\usepackage{makecell}
+\usepackage[flushleft]{threeparttable}
 \usepackage{import}
 \usepackage{adjustbox}
 \usepackage[square,sort,comma,numbers]{natbib}
@@ -70,6 +70,10 @@
 }
 \newcommand{\FeatIVContent}[4]{
 \multirow{1}{*}{{#1}} & \multicolumn{1}{c}{\resizebox{.1\linewidth}{!}{{#2}}} & \multicolumn{1}{c}{\resizebox{.1\linewidth}{!}{{#3}}} & \multicolumn{1}{c|}{\resizebox{.1\linewidth}{!}{{#4}}} \\ \hline
+}
+\newcommand{\LangFeatContent}[4]{
+\multirow{2}{*}{{#1}} & Basic & Advacnced & Expert \\
+                        & \resizebox{.075\linewidth}{!}{{#2}}     & \resizebox{.075\linewidth}{!}{{#3}}         & \resizebox{.075\linewidth}{!}{{#4}}      \\ \hline
 }
 \newcommand{\FeatIRow}[2]{
 {#1} \\ \hline
