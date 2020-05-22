@@ -54,26 +54,25 @@
 \newcommand{\SoCalled}[1]{\textit{``{#1}''}}
 \newcommand{\Parentheses}[1]{\textit{({#1})}}
 \newcommand{\FeatIIHeader}[2]{
-\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}  \\ \hline \hline
 }
 \newcommand{\FeatIIContent}[2]{
 \multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#1}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#2}}} \\ \hline
 }
 \newcommand{\FeatIIIHeader}[3]{
-\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline
+\multicolumn{1}{|c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c|}{{#3}}       \\ \hline \hline
 }
 \newcommand{\FeatIIIContent}[3]{
 \multicolumn{1}{|c}{\resizebox{.2\linewidth}{!}{{#1}}} & \multicolumn{1}{c}{\resizebox{.2\linewidth}{!}{{#2}}} & \multicolumn{1}{c|}{\resizebox{.2\linewidth}{!}{{#3}}} \\ \hline
 }
 \newcommand{\FeatIVHeader}[4]{
-\multicolumn{1}{|c|}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c}{{#3}}       & \multicolumn{1}{c|}{{#4}}       \\ \hline
+\multicolumn{1}{c}{{#1}}        & \multicolumn{1}{c}{{#2}}       & \multicolumn{1}{c}{{#3}}       & \multicolumn{1}{c|}{{#4}}       \\ \hline \hline
 }
 \newcommand{\FeatIVContent}[4]{
 \multirow{1}{*}{{#1}} & \multicolumn{1}{c}{\resizebox{.1\linewidth}{!}{{#2}}} & \multicolumn{1}{c}{\resizebox{.1\linewidth}{!}{{#3}}} & \multicolumn{1}{c|}{\resizebox{.1\linewidth}{!}{{#4}}} \\ \hline
 }
 \newcommand{\LangFeatContent}[4]{
-\multirow{2}{*}{{#1}} & Basic & Advacnced & Expert \\
-                        & \resizebox{.075\linewidth}{!}{{#2}}     & \resizebox{.075\linewidth}{!}{{#3}}         & \resizebox{.075\linewidth}{!}{{#4}}      \\ \hline
+#1 & \adjustbox{valign=M,min size={.075\linewidth}{.075\linewidth}}{{#2}}     & \adjustbox{valign=M,min size={.075\linewidth}{.075\linewidth}}{{#3}}         & \adjustbox{valign=M,min size={.075\linewidth}{.075\linewidth}}{{#4}}      \\ \hline
 }
 \newcommand{\FeatIRow}[2]{
 {#1} \\ \hline
