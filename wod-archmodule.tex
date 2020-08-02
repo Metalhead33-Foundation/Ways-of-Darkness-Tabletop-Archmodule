@@ -104,6 +104,25 @@ More \textit{(up-to-date)} information at: \url{https://ways-of-darkness.sonck.n
 \multicolumn{3}{|c|}{{#4}} \\ \hline
 \FeatIIIRow{{#1}}{{#2}}{{#3}}{{#5}}{{#6}}{{#7}}
 \end{tabularx}}
+\newcommand{\ReligionHeader}[0]{
+\hline
+\textbf{Virtue} & \textbf{Effect}               & \textbf{Contradicts with}      \\ \hline
+}
+%\newcommand{\ReligionRow}[5]{
+%\textbf{{#1}}  & {#3} & \multirow{2}{*}{{#5}} \\
+%{#2}   & {#4} &                       \\ \hline
+%}
+\newcommand{\ReligionRow}[5]{
+\subsection{{#1}}
+
+{#2}
+
+\begin{itemize}
+\item \textbf{Effect:} {#3}
+\item \textbf{Divine Favour:} {#4}
+\item \textbf{Contradicts with:} {#5}
+\end{itemize}
+}
 
 \maketitle
 \chapter*{Versions}
