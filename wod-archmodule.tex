@@ -14,6 +14,7 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{float}
+\usepackage{pbox}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{tcolorbox}
@@ -122,6 +123,11 @@ More \textit{(up-to-date)} information at: \url{https://ways-of-darkness.sonck.n
 \item \textbf{Divine Favour:} {#4}
 \item \textbf{Contradicts with:} {#5}
 \end{itemize}
+}
+\newcommand{\SinElement}[3]{
+\multirow{2}{*}{{#1}}              & {#2} \\
+                                 & - \hspace{\parindent} \textit{Rationale:} {#3}\\
+                                 \midrule
 }
 
 \maketitle
