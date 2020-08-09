@@ -11,6 +11,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{tabularx,booktabs}
+\usepackage{xltabular}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{float}
@@ -132,6 +133,8 @@ More \textit{(up-to-date)} information at: \url{https://ways-of-darkness.sonck.n
 
 \maketitle
 \chapter*{Versions}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 \input{latex.make/generated/versions.tex}
 \tableofcontents
 \input{chapters.d.tex/index.tex}
